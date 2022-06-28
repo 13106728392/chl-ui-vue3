@@ -29,7 +29,7 @@
         <span
           class="c-icon-x"
           v-if="clearable && textLength > 0"
-          @click="handerInput()"
+          @click="clearText"
         ></span>
       </transition>
     </template>
@@ -49,7 +49,9 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { defineEmits, defineProps } from "vue";
+import { defineEmits, defineProps, ref ,computed } from "vue";
+// 绑定的值
+const text = ref('')
 
 const props = defineProps({
   type: String,
@@ -60,10 +62,20 @@ const props = defineProps({
   clearable: Boolean,
   modelValue: [String, Number],
 });
+//1、暴露内部数据
+const  emits = defineEmits(['change']);
 
+const textLength = computed(() => text.value.length)
 
-
-
-
+// 组件自己的方法
+const  handerInput = (e:any ) => {
+  text.value = e ? e.target.value : ''
+  //2、触发父组件中暴露的childFn方法并携带数据
+  emits('change',text.value)
+}
+const clearText = ()=>{
+  text.value = ''
+  emits('change',text.value)
+}
 
 </script>

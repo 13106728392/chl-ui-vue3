@@ -1,7 +1,12 @@
 
   .c-from-input {
-    position: relative;
-    display: inline-block;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 1em;
+ 
+    padding: 2px 8px;
+    border-radius: var(--borderRadius);
 
     &.c-input-icon-before {
       .c-input {
@@ -76,7 +81,7 @@
   .c-input,
   .c-textarea {
     padding: 7px 10px;
-    border: 1px solid var(--line-color);
+    border: 1px solid var(--default);
     border-radius: 4px;
     font-size: 12px;
     transition-property: border-color, box-shadow;

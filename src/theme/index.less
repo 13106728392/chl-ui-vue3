@@ -1,13 +1,14 @@
 :root,
 [data-color-mode='light'] {
-  --default: 227, 234, 239; //#e3eaef
-  --success: 10, 207, 151; //#0acf97
-  --primary: 45, 123, 244; //#2d7bf4;
-  --danger: 241, 85, 108; //#f1556c
-  --info: 78, 183, 235; // #4eb7eb
-  --warning: 249, 188, 11; //#f9bc0b;
-  --white: 255, 255, 255;
-  --black: 0, 0, 0;
+  --default: #8997a4;
+  --success: #67C23A;
+  --primary: #1989FA;
+  --danger: #F56C6C;
+  --info: #8896B3;
+  --warning: #E6A23C;
+  --white: #FFFFFF;
+  --black: #000;
+  --borderRadius: 6px;
 
   --mix-color: 68, 68, 68;
   --main-background-color: #ffffff;
@@ -22,14 +23,15 @@
 }
 
 [data-color-mode='dark'] {
-  --default: 227, 234, 239; //#e3eaef
-  --success: 10, 207, 151; //#0acf97
-  --primary: 45, 123, 244; //#2d7bf4;
-  --danger: 241, 85, 108; //#f1556c
-  --info: 78, 183, 235; // #4eb7eb
-  --warning: 249, 188, 11; //#f9bc0b;
-  --white: 255, 255, 255;
-  --black: 0, 0, 0;
+  --borderRadius: 6px;
+  --default: #8997a4;
+  --success: #67C23A;
+  --primary: #1989FA;
+  --danger: #F56C6C;
+  --info: #8896B3;
+  --warning: #E6A23C;
+  --white: #FFFFFF;
+  --black: #000;
 
   --mix-color: 255, 255, 255;
   --main-background-color: #1a1d24;
@@ -43,9 +45,9 @@
   --scroll: rgb(var(--white), 0.7);
 }
 
-// @import 'icon';
+@import './icon.less';
 @import './input.less';
-// @import 'button';
+@import './button.less';
 // @import 'grid';
 // @import 'input';
 // @import 'checkbox';
@@ -72,6 +74,7 @@
 ::after,
 ::before {
   box-sizing: border-box;
+ 
 }
 
 html {
