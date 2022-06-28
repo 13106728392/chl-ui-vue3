@@ -63,7 +63,11 @@ const useClass = (props:any) => {
   });
 };
 
-  const className = useClass(props);
+const {loading} = props
+const className = useClass(props);
+const load = ref(loading)
+// debugger
+const isDisabled = computed(() => props.disabled || load.value);
 
 
 
