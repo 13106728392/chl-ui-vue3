@@ -1,16 +1,19 @@
 .c-btn {
+  --color:var(--default);
   position: relative;
     font-size: 14px;
-    height: 32px;
+    // height: 32px;
     padding: 0 1em;
+    margin: 0;
     border-radius: 4px;
     border: 1px solid #999;
-    background: white;
+    background: transparent;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     vertical-align: middle;
-    min-width: 70px;
+    padding: 5px 5px;
+    // min-width: 70px;
     cursor: pointer;
   
     &:hover {
@@ -59,6 +62,7 @@
     &.c-btn-primary {
       background: var(--primary);
       border-color: var(--primary);
+      --color:var(--primary);
       color: #fff;
   
       &:hover {
@@ -73,6 +77,7 @@
     &.c-btn-info {
       background: var(--info);
       border-color: var(--info);
+      --color:var(--info);
       color: #fff;
   
       &:hover {
@@ -87,6 +92,7 @@
     &.c-btn-success {
       background: var(--success);
       border-color: var(--success);
+      --color:var(--success);
       color: #fff;
   
       &:hover {
@@ -101,6 +107,7 @@
     &.c-btn-warning {
       background: var(--warning);
       border-color: var(--warning);
+      --color:var(--warning);
       color: #fff;
   
       &:hover {
@@ -115,6 +122,7 @@
     &.c-btn-danger {
       background: var(--danger);
       border-color: var(--danger);
+      --color:var(--danger);
       color: #fff;
   
       &:hover {
@@ -126,8 +134,56 @@
       }
     }
 
+    &.is-circle {
+      border-radius: 50%;
+      padding: 12px 10px;
+    }
 
-    // loading
+    &.c-btn-lg {
+      padding: 8px 33px;
+      font-size: 14px;
+    }
+  
+    &.c-btn-sm {
+      padding: 3px 10px;
+      font-size: 12px;
+      .c-load{
+        width: 1.5em;
+        height: 1.5em;
+      }
+    }
+  
+    &.c-btn-text{
+      padding-left: 2px;
+      padding-right: 2px;
+      color: var(--color);
+      background-color: transparent;
+      border: none;
+  
+      &:hover{
+        color: var(--color);
+      }
+      &:active{
+        box-shadow: none;
+      }
+    }
+
+    &.is-plain {
+      border-width: 1px;
+      border-style: solid;
+      background-color: transparent;
+      box-shadow: none;
+      color: var(--color);
+  
+      &:hover{
+        // background-color: var(--color);
+      }
+      &:active {
+        box-shadow: 0 0 0 1px var(--color);
+      }
+    }
+
+    
     .c-load {
       display: inline-block;
       width: 2em;
