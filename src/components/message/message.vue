@@ -1,6 +1,6 @@
 <template>
   <transition name="slideY-fade" @after-leave="afterLeave" appear>
-    <div class="c-message" v-show="isShow">
+    <div class="c-message" :class="className[type]" v-show="isShow">
       <span><i :class="icon[type]" />{{ content }}</span>
     </div>
   </transition>
@@ -20,7 +20,7 @@ import { defineEmits, defineProps, ref ,computed ,getCurrentInstance} from "vue"
         type: String,
         duration: {
             type: Number,
-            default: 2000,
+            default: 3000,
         },
     })
 
@@ -38,6 +38,13 @@ import { defineEmits, defineProps, ref ,computed ,getCurrentInstance} from "vue"
       success: 'c-icon-check-circle success',
       warning: 'c-icon-alert-triangle warning',
       loading: 'c-icon-loader loading',
+    }
+    const className = {
+        info: 'message-info',
+        error: 'message-error',
+        success: 'message-success',
+        warning: 'message-warning',
+        loading: 'message-loading',
     }
 
 

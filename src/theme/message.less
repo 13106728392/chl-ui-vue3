@@ -5,13 +5,34 @@
   top: 16px;
   left: 50%;
   background-color: var(--main-background-color);
-  box-shadow: 0 4px 10px var(--info);
-  padding: 5px 20px;
-  border-radius: 3px;
+  // box-shadow: 0 1px 2px var(--info);
+  padding: 8px 20px;
+  border-radius: var(--borderRadius);
   pointer-events: none;
   font-family: Arial, Helvetica, sans-serif;
   transform: translate(-50%, 0);
- 
+
+  &.message-info{
+    border: 1px solid var(--info);
+    color: var(--info);
+  }
+  &.message-error{
+    border: 1px solid var(--error);
+    color: var(--error);
+  }
+  &.message-success{
+    border: 1px solid var(--success);
+    color: var(--success);
+  }
+  &.message-warning{
+    border: 1px solid var(--warning);
+    color: var(--warning);
+  }
+  &.message-loading{
+    border: 1px solid var(--loading);
+    color: var(--loading);
+  }
+
   
   span{
     font-size: 14px;
