@@ -26,7 +26,6 @@
   import cInput from  '../components/input' 
   import cIcon from  '../components/icon' 
   import cButton from  '../components/button' 
-  import cMessage from '../components/message'
   
   const changeText =(data:string)=>{
     console.log(data)
@@ -42,7 +41,6 @@
     $message.success('你好呀')
   }
   
-
 
 
 </script>
