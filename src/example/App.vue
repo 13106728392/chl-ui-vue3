@@ -39,10 +39,10 @@
   console.log(instance)
   const {$message} = instance.appContext.config.globalProperties
   const handerClick = () => {
-    $message.success('你好呀')
+    // $message.success('你好呀')
+    $message.warning('你好呀')
   }
   
-
 
 
 </script>
