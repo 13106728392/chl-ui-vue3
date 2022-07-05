@@ -5,7 +5,7 @@
       <div class="content">
         {{ content }}
       </div>
-      <i class="c-icon-x close-able" v-show="closeBtn"/>
+      <i class="c-icon-x close-able" @click="close" v-show="closeBtn" />
     </div>
   </transition>
 </template>
@@ -19,10 +19,12 @@ import {
   getCurrentInstance,
 } from "vue";
 import { icon, className } from "./type";
+import { isFunction } from "../../utils/isType";
 
 name: "Message";
 const instance = getCurrentInstance();
 const isShow = ref(true);
+let closeBtn = ref(false)
 
 const props = defineProps({
   content: [String, Number, Boolean],
@@ -32,28 +34,30 @@ const props = defineProps({
   },
   duration: {
     type: Number,
-    default: 300000,
+    default: 3000,
   },
-  closeBtn:{
-    type:Boolean,
-    default:false,
-  }
+  onClose: {
+    type: Function,
+    default: null,
+  },
 });
-
-const autoClose = ()=>{
-    
-}
 
 
 if (props.duration > 0) {
   setTimeout(close, props.duration);
+}else{
+   closeBtn.value= true
 }
 
 function close() {
+  debugger
   isShow.value = false;
 }
 
 const afterLeave = () => {
+  if (props.onClose && isFunction(props.onClose)) {
+    props.onClose();
+  }
   instance.vnode.el.parentElement?.removeChild(instance.vnode.el);
 };
 </script>

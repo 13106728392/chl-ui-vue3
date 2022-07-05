@@ -40,7 +40,18 @@
   const {$message} = instance.appContext.config.globalProperties
   const handerClick = () => {
     // $message.success('你好呀')
-    $message.warning('你好呀')
+    $message(
+     {
+       content:'sss',
+        type: 'error',
+       onClose:()=>{
+        console.log(6777)
+       },
+       duration:0
+
+     }
+
+    )
   }
   
 
