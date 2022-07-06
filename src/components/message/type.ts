@@ -1,6 +1,6 @@
 export const icon = {
   info: "c-icon-info info",
-  error: "c-icon-c-x error",
+  error: "c-icon-x error",
   success: "c-icon-check-circle success",
   warning: "c-icon-alert-triangle warning",
   loading: "c-icon-loader loading",

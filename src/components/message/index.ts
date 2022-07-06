@@ -7,7 +7,6 @@ function messageCreate({
   duration,
   onClose,
 }) {
-  debugger
   const props = {
     content,
     type,

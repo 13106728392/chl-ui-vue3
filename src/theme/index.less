@@ -11,14 +11,14 @@
 
 :root,
 [data-color-mode='light'] {
-  --default: #8997a4;
+  --default: #8898a7;
   --success: #67C23A;
   --primary: #1989FA;
   --danger: #F56C6C;
   --info: #8896B3;
-  --warning: #E6A23C;
+  --warning: #e7a23a;
   --white: #FFFFFF;
-  --black: #000;
+  --black:0, 0,0;
   --borderRadius: 6px;
 
   --mix-color: 68, 68, 68;
@@ -65,7 +65,7 @@
 // @import 'select';
 @import './message.less';
 // @import 'notice';
-// @import 'switch';
+@import './switch';
 // @import 'transition';
 // @import 'modal';
 // @import 'tooltip';
@@ -103,19 +103,19 @@ html {
 }
 
 .info {
-  color: rgb(var(--info));
+  color: var(--info);
 }
 
 .error {
-  color: rgb(var(--danger));
+  color: var(--danger);
 }
 
 .success {
-  color: rgb(var(--success));
+  color: var(--success);
 }
 
 .warning {
-  color: rgb(var(--warning));
+  color: var(--warning);
 }
 
 i.c-arrow {

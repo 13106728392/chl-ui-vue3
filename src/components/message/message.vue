@@ -38,7 +38,7 @@ const props = defineProps({
   },
   onClose: {
     type: Function,
-    default: null,
+    default: ()=>{},
   },
 });
 
@@ -50,7 +50,6 @@ if (props.duration > 0) {
 }
 
 function close() {
-  debugger
   isShow.value = false;
 }
 
