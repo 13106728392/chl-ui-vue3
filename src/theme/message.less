@@ -1,29 +1,38 @@
 .c-message{
   font-size: 14px;
   position: fixed;
-  z-index: 1010;
+  z-index: 99999;
   top: 16px;
   left: 50%;
+  display: flex;
+  justify-content: space-around;
   background-color: var(--main-background-color);
   // box-shadow: 0 1px 2px var(--info);
-  padding: 8px 20px;
+  padding: 8px 10px;
   border-radius: var(--borderRadius);
-  pointer-events: none;
+  // pointer-events: none;  触摸事件消除
   font-family: Arial, Helvetica, sans-serif;
   transform: translate(-50%, 0);
+
+  .close-able{
+    cursor: pointer;
+  }
+  .content{
+    margin: 0 5px;
+  }
 
   &.message-info{
     border: 1px solid var(--info);
     color: var(--info);
   }
   &.message-error{
-    border: 1px solid var(--error);
-    color: var(--error);
+    border: 1px solid var(--danger);
+    color: var(--danger);
   }
   &.message-success{
     border: 1px solid var(--success);
     color: var(--success);
-  }
+  } 
   &.message-warning{
     border: 1px solid var(--warning);
     color: var(--warning);
@@ -32,7 +41,13 @@
     border: 1px solid var(--loading);
     color: var(--loading);
   }
-
+  .close-able{
+    &:hover{
+      animation: rotating linear .5s infinite;
+      transform-origin: center;
+      animation-iteration-count:1;
+    }
+  }
   
   span{
     font-size: 14px;
@@ -41,18 +56,18 @@
     display: block;
   }
 
-  i[class^=c-icon]{
-    font-size: 16px;
-    position: absolute;
-    left: 0;
-    top: -2px;
+  // i[class^=c-icon]{
+  //   font-size: 16px;
+  //   position: absolute;
+  //   left: 0;
+  //   top: -2px;
 
-    &.loading{
-      color: rgb(var(--info));
-      animation: rotating linear 1.5s infinite;
-      transform-origin: center;
-    }
-  }
+  //   &.loading{
+  //     color: rgb(var(--info));
+  //     animation: rotating linear 1.5s infinite;
+  //     transform-origin: center;
+  //   }
+  // }
 }
 
 @keyframes rotating {
@@ -61,16 +76,16 @@
   }
 
   100% {
-    transform: rotate(360deg);
+    transform: rotate(90deg);
   }
 }
 
 /*
-  Message组件
+  Message组件 动画
 */
 .slideY-fade-enter-active,
 .slideY-fade-leave-active {
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
 }
 .slideY-fade-enter-from,
 .slideY-fade-leave-to {

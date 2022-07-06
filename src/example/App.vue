@@ -1,47 +1,83 @@
 <template>
-    <c-input placeholder="请输入" clearable @change="changeText" />
-   
-    <c-icon type="c-icon-link"></c-icon>
+  <c-input placeholder="请输入" clearable @change="changeText" />
+
+  <c-icon type="c-icon-link"></c-icon>
 
 
-    <c-button type="primary" size="mini">primary</c-button>
-    <c-button type="info" size="mini" circle>info</c-button>
-    <c-button type="text" size="mini" >success</c-button>
-    <c-button type="warning" size="mini" icon="c-icon-link"  ></c-button>
-    <c-button type="danger" size="mini" @click="clickBtn">danger</c-button>
+  <c-button type="primary" size="mini">primary</c-button>
+  <c-button type="info" size="mini" circle>info</c-button>
+  <c-button type="text" size="mini">success</c-button>
+  <c-button type="warning" size="mini" icon="c-icon-link"></c-button>
+  <c-button type="danger" size="mini" @click="clickBtn">danger</c-button>
   <c-button type="danger" size="mini" plain>plain</c-button>
 
 
   <c-button type="danger" size="mini" @click="handerClick" plain>Message</c-button>
-  
+
+  <c-button type="success" size="mini" @click="handerClick1" plain>success</c-button>
+
+ <c-switch v-model="state1">switch</c-switch>
+ <c-switch type="warning" v-model="state1" @change="defaultChange('switch2')">
+    <template #open>开</template>
+    <template #close>关</template>
+ </c-switch>
 
 
-    
 
 
 </template>
 
 <script setup lang="ts">
-  import {getCurrentInstance} from 'vue'
-  import cInput from  '../components/input' 
-  import cIcon from  '../components/icon' 
-  import cButton from  '../components/button' 
-  
-  const changeText =(data:string)=>{
-    console.log(data)
-  }
-  const clickBtn =()=>{
-    console.log(55)
-  }
+import { getCurrentInstance,ref } from 'vue'
+import cInput from '../components/input'
+import cIcon from '../components/icon'
+import cButton from '../components/button'
+import cMessage from '../components/message'
+import cSwitch from '../components/switch'
 
-  const instance = getCurrentInstance()
-  console.log(instance)
-  const {$message} = instance.appContext.config.globalProperties
-  const handerClick = () => {
-    // $message.success('你好呀')
-    $message.warning('你好呀')
-  }
-  
+const changeText = (data: string) => {
+  console.log(data)
+}
+const clickBtn = () => {
+  console.log(55)
+}
+
+const state1= ref(false)
+const instance = getCurrentInstance()
+const { $message } = instance.appContext.config.globalProperties
+const defaultChange = (val)=>{
+    console.log(val)
+}
+const handerClick = () => {
+  // $message.success('你好呀')
+  $message(
+    {
+      content: 'error',
+      type: 'error',
+      onClose: () => {
+        console.log(6777)
+      },
+      duration: 0
+
+    }
+
+  )
+}
+
+const handerClick1 = ()=>{
+   $message(
+    {
+      content: 'success',
+      type: 'success',
+      onClose: () => {
+        console.log(77777)
+      },
+      // duration: 0
+    }
+  )
+}
+
+
 
 
 </script>

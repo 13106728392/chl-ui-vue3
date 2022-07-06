@@ -2,6 +2,7 @@
   .c-from-input {
     font-size: 12px;
     display: inline-flex;
+    position: relative;
     align-items: center;
     margin-bottom: 1em;
  
@@ -41,16 +42,18 @@
       cursor: pointer;
       width: 15px;
       height: 15px;
+      right: 15px;
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: var(--line-color);
       border-radius: 50%;
       transition: all .25s ease;
-      color: rgb(var(--white));
+      color: var(--default);
 
       &:hover{
-        background-color: rgb(var(--danger));
+        background-color: var(--info);
+        color: var(--white);
       }
     }
 
