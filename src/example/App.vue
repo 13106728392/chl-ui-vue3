@@ -29,11 +29,7 @@
 
 <script setup lang="ts">
 import { getCurrentInstance,ref } from 'vue'
-import cInput from '../components/input'
-import cIcon from '../components/icon'
-import cButton from '../components/button'
-import cMessage from '../components/message'
-import cSwitch from '../components/switch'
+
 
 const changeText = (data: string) => {
   console.log(data)
