@@ -18,7 +18,7 @@ import {
   computed,
   getCurrentInstance,
 } from "vue";
-import { icon, className } from "./type";
+import { icon, className } from "../../utils/type";
 import { isFunction } from "../../utils/isType";
 
 name: "Message";

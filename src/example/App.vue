@@ -16,11 +16,18 @@
 
   <c-button type="success" size="mini" @click="handerClick1" plain>success</c-button>
 
- <c-switch v-model="state1">switch</c-switch>
- <c-switch type="warning" v-model="state1" @change="defaultChange('switch2')">
+  <c-switch v-model="state1">switch</c-switch>
+  <c-switch type="warning" v-model="state1" @change="defaultChange('switch2')">
     <template #open>开</template>
     <template #close>关</template>
- </c-switch>
+  </c-switch>
+
+
+  <c-button type="primary" @click="openModal">显示对话框</c-button>
+  <c-modal title="戏命师" v-model="visible" @ok="ok" @cancel="openModal">
+    <p>我于杀戮之中绽放 ,亦如黎明中的花朵</p>
+    <p>你，将饱含诗意。我的灵感正在涌现，作品即是一切，艺术值得为之痛苦，我为喝彩而生，你将为其呕心沥血。</p>
+  </c-modal>
 
 
 
@@ -28,21 +35,29 @@
 </template>
 
 <script setup lang="ts">
-import { getCurrentInstance,ref } from 'vue'
+import { getCurrentInstance, ref } from 'vue'
 
-
+let visible = ref(false)
 const changeText = (data: string) => {
   console.log(data)
 }
+
+const ok = () => { }
 const clickBtn = () => {
   console.log(55)
 }
 
-const state1= ref(false)
+const state1 = ref(false)
 const instance = getCurrentInstance()
 const { $message } = instance.appContext.config.globalProperties
-const defaultChange = (val)=>{
-    console.log(val)
+const defaultChange = (val) => {
+  console.log(val)
+}
+
+const openModal = ()=>{
+  
+  visible.value= !visible.value
+  debugger
 }
 const handerClick = () => {
   // $message.success('你好呀')
@@ -60,8 +75,8 @@ const handerClick = () => {
   )
 }
 
-const handerClick1 = ()=>{
-   $message(
+const handerClick1 = () => {
+  $message(
     {
       content: 'success',
       type: 'success',
