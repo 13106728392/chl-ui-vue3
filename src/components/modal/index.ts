@@ -1,4 +1,4 @@
-import element from "./modal.vue";
+ import element from "./modal.vue";
 import { createComponent } from "../../utils/component";
 
 

@@ -9,7 +9,7 @@
                     appear>
                     <div class="c-modal-content" v-show="isShow" :class="{ 'c-modal-confirm-wrap': type !== '' }"
                         :style="modalStyle">
-                        <div class="c-modal-close" v-if="closable" @click="cancel">
+                        <div class="c-modal-close" v-if="closable" @click="maskcancel">
                             <i class="c-icon-x"></i>
                         </div>
 
@@ -58,9 +58,14 @@ import { isFunction } from "../../utils/isType";
 
 
 
+
 name: "Modal";
 const props = defineProps({
     content: [String, Number, Boolean],
+    onClose:{
+        type:Function,
+        default:null
+    },
     title: {
         type: String,
         default: "info",
@@ -69,7 +74,7 @@ const props = defineProps({
         type: String,
         default: "info",
     },
-    closable: {
+    closable: {  // 是否可以关闭
         type: Boolean,
         default: true
     },
@@ -93,7 +98,12 @@ const props = defineProps({
     modelValue: {
         type: Boolean,
         default: false
-    }
+    },
+    teleprot: {  // 是否插入到body
+      type: Boolean,
+      default: true,
+    },
+ 
 
 })
 
@@ -101,12 +111,10 @@ const props = defineProps({
 let mousePosition = props.mouseClick
 // const isShow = ref(props.modelValue)
 
-
 const isShow = computed(() => {
     return props.modelValue
 
 })
-
 
 
 const modalStyle = computed(() => {
@@ -118,8 +126,27 @@ const modalStyle = computed(() => {
     return dest
 })
 
-const cancel = () => { }
-const maskcancel = () => { }
+const cancel = () => { 
+    console.log(isShow)
+    isShow.value = false
+    emits('update:modelValue', isShow.value)
+    emits('cancel')
+    if (props.onClose && isFunction(props.onClose)) {
+        props.onClose();
+    }
+}
+
+
+const emits = defineEmits(['cancel','update:modelValue'])
+
+
+const maskcancel = () => {
+    if (props.closable) {
+        cancel()
+    }
+}
+
+
 const setOrigin = (el) => {
     if (mousePosition) {
         const { x, y } = mousePosition
@@ -136,7 +163,7 @@ let instance = getCurrentInstance() // 获得当前实例
 
 const afterLeave = () => {
     document.body.style.overflow = ''
-    if (!teleprot.value) {
+    if (!props.teleprot) {
         instance.vnode.el.parentElement?.removeChild(instance.vnode.el)
     }
 }
