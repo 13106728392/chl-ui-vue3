@@ -15,12 +15,12 @@ tag: General
 
 ```html
 <template>
-  <x-button type="default"> default </x-button>
-  <x-button type="warning"> warning </x-button>
-  <x-button type="primary"> primary </x-button>
-  <x-button type="success"> success </x-button>
-  <x-button type="info"> info </x-button>
-  <x-button type="danger"> danger </x-button>
+  <c-button type="default"> default </c-button>
+  <c-button type="warning"> warning </c-button>
+  <c-button type="primary"> primary </c-button>
+  <c-button type="success"> success </c-button>
+  <c-button type="info"> info </c-button>
+  <c-button type="danger"> danger </c-button>
 </template>
 ```
 
@@ -34,12 +34,12 @@ tag: General
 
 ```html
 <template>
-  <x-button type="default" plain> default </x-button>
-  <x-button type="warning" plain> warning </x-button>
-  <x-button type="primary" plain> primary </x-button>
-  <x-button type="success" plain> success </x-button>
-  <x-button type="info" plain> info </x-button>
-  <x-button type="danger" plain> danger </x-button>
+  <c-button type="default" plain> default </c-button>
+  <c-button type="warning" plain> warning </c-button>
+  <c-button type="primary" plain> primary </c-button>
+  <c-button type="success" plain> success </c-button>
+  <c-button type="info" plain> info </c-button>
+  <c-button type="danger" plain> danger </c-button>
 </template>
 ```
 
@@ -53,12 +53,12 @@ tag: General
 
 ```html
 <template>
-  <x-button type="default" round plain> default </x-button>
-  <x-button type="warning" round> warning </x-button>
-  <x-button type="primary" round plain> primary </x-button>
-  <x-button type="success" round> success </x-button>
-  <x-button type="info" round plain> info </x-button>
-  <x-button type="danger" round> danger </x-button>
+  <c-button type="default" round plain> default </c-button>
+  <c-button type="warning" round> warning </c-button>
+  <c-button type="primary" round plain> primary </c-button>
+  <c-button type="success" round> success </c-button>
+  <c-button type="info" round plain> info </c-button>
+  <c-button type="danger" round> danger </c-button>
 </template>
 ```
 
@@ -72,19 +72,19 @@ tag: General
 
 ```html
 <template>
-  <x-button type="warning" size="sm" round :loading="true">loading</x-button>
-  <x-button type="danger" round :loading="true">loading</x-button>
-  <x-button type="info" round plain :loading="true">loading</x-button>
-  <x-button
+  <c-button type="warning" size="sm" round :loading="true">loading</c-button>
+  <c-button type="danger" round :loading="true">loading</c-button>
+  <c-button type="info" round plain :loading="true">loading</c-button>
+  <c-button
     type="success"
     plain
     :loading="loading1"
     @click="handerClick1"
     icon="x-icon-heart-on"
-    >loading</x-button
+    >loading</c-button
   >
-  <x-button type="primary" :loading="loading2" @click="handerClick2"
-    >Click loading</x-button
+  <c-button type="primary" :loading="loading2" @click="handerClick2"
+    >Click loading</c-button
   >
 </template>
 <script>
@@ -131,7 +131,7 @@ tag: General
 
 ```html
 <template>
-  <x-button type="warning" @click="handlePromise">loading</x-button>
+  <c-button type="warning" @click="handlePromise">loading</c-button>
 </template>
 <script>
   export default {
@@ -161,12 +161,12 @@ tag: General
 
 ```html
 <template>
-  <x-button plain round disabled>default</x-button>
-  <x-button type="primary" plain round disabled>primary</x-button>
-  <x-button type="success" plain round disabled>success</x-button>
-  <x-button type="info" plain round disabled>info</x-button>
-  <x-button type="danger" round disabled>danger</x-button>
-  <x-button type="warning" disabled>warning</x-button>
+  <c-button plain round disabled>default</c-button>
+  <c-button type="primary" plain round disabled>primary</c-button>
+  <c-button type="success" plain round disabled>success</c-button>
+  <c-button type="info" plain round disabled>info</c-button>
+  <c-button type="danger" round disabled>danger</c-button>
+  <c-button type="warning" disabled>warning</c-button>
 </template>
 ```
 
@@ -180,9 +180,9 @@ tag: General
 
 ```html
 <template>
-  <x-button type="primary" size="sm">small</x-button>
-  <x-button type="warning" size="md">default</x-button>
-  <x-button type="danger" size="lg">large</x-button>
+  <c-button type="primary" size="sm">small</c-button>
+  <c-button type="warning" size="md">default</c-button>
+  <c-button type="danger" size="lg">large</c-button>
 </template>
 ```
 
@@ -196,12 +196,12 @@ tag: General
 
 ```html
 <template>
-  <x-button icon="x-icon-heart-on" circle></x-button>
-  <x-button type="primary" icon="x-icon-x" circle></x-button>
-  <x-button type="info" icon="x-icon-mic" circle></x-button>
-  <x-button type="danger" icon="x-icon-music" circle></x-button>
-  <x-button type="warning" icon="x-icon-thumbs-down" circle></x-button>
-  <x-button type="success" icon="x-icon-thumbs-up" circle></x-button>
+  <c-button icon="x-icon-heart-on" circle></c-button>
+  <c-button type="primary" icon="x-icon-x" circle></c-button>
+  <c-button type="info" icon="x-icon-mic" circle></c-button>
+  <c-button type="danger" icon="x-icon-music" circle></c-button>
+  <c-button type="warning" icon="x-icon-thumbs-down" circle></c-button>
+  <c-button type="success" icon="x-icon-thumbs-up" circle></c-button>
 </template>
 ```
 
@@ -215,12 +215,12 @@ tag: General
 
 ```html
 <template>
-  <x-button icon="x-icon-home">default</x-button>
-  <x-button type="primary" icon="x-icon-star-on">primary</x-button>
-  <x-button type="success" icon="x-icon-search">success</x-button>
-  <x-button type="info" icon="x-icon-user">info</x-button>
-  <x-button type="danger" icon="x-icon-zap">danger</x-button>
-  <x-button type="warning" icon="x-icon-triangle">warning</x-button>
+  <c-button icon="x-icon-home">default</c-button>
+  <c-button type="primary" icon="x-icon-star-on">primary</c-button>
+  <c-button type="success" icon="x-icon-search">success</c-button>
+  <c-button type="info" icon="x-icon-user">info</c-button>
+  <c-button type="danger" icon="x-icon-zap">danger</c-button>
+  <c-button type="warning" icon="x-icon-triangle">warning</c-button>
 </template>
 ```
 
@@ -234,9 +234,9 @@ tag: General
 
 ```html
 <template>
-  <x-button type="success" icon="x-icon-heart-on" round block>success</x-button>
-  <x-button type="warning" icon="x-icon-star-on" block>warning</x-button>
-  <x-button type="primary" plain block>primary</x-button>
+  <c-button type="success" icon="x-icon-heart-on" round block>success</c-button>
+  <c-button type="warning" icon="x-icon-star-on" block>warning</c-button>
+  <c-button type="primary" plain block>primary</c-button>
 </template>
 ```
 
