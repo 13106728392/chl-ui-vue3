@@ -7,9 +7,15 @@ import Input from './input'
 import Modal from './modal'
 import '../theme/index.less'
 
-const components = [Button,Icon,Switch,Message,Input,Modal]
+
+
+const components = [Button,Icon,Switch,Input]
+
 
 const install = (app: App) => {
+  // 挂载全局访问属方法获取
+  app.config.globalProperties.$message = Message
+  app.config.globalProperties.$modal = Modal
   components.map(item => {
     app.component(item.name, item)
   })

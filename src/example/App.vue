@@ -23,11 +23,7 @@
   </c-switch>
 
 
-  <c-button type="primary" @click="openModal">显示对话框</c-button>
-  <c-modal title="戏命师" v-model="visible" @ok="ok" @cancel="openModal">
-    <p>我于杀戮之中绽放 ,亦如黎明中的花朵</p>
-    <p>你，将饱含诗意。我的灵感正在涌现，作品即是一切，艺术值得为之痛苦，我为喝彩而生，你将为其呕心沥血。</p>
-  </c-modal>
+  <c-button type="primary" @click="openModal">openModal</c-button>
 
 
 
@@ -37,27 +33,39 @@
 <script setup lang="ts">
 import { getCurrentInstance, ref } from 'vue'
 
-let visible = ref(false)
 const changeText = (data: string) => {
   console.log(data)
 }
 
-const ok = () => { }
+const ok = () => { 
+  console.log('ok')
+}
+const onClose = ()=>{
+  console.log('onClose')
+}
 const clickBtn = () => {
   console.log(55)
 }
 
 const state1 = ref(false)
 const instance = getCurrentInstance()
-const { $message } = instance.appContext.config.globalProperties
+const { $message ,$modal} = instance.appContext.config.globalProperties
 const defaultChange = (val) => {
   console.log(val)
 }
 
 const openModal = ()=>{
+  $modal({
+      content: 'error',
+      type: 'warning',
+      onClose: () => {
+        console.log('onClose')
+      },
+      confirm :()=>{
+        console.log('confirm')
+      }
+  })
   
-  visible.value= !visible.value
-  debugger
 }
 const handerClick = () => {
   // $message.success('你好呀')

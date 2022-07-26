@@ -13,3 +13,12 @@ export const className = {
   warning: "message-warning",
   loading: "message-loading",
 };
+
+
+export const modalClassName = {
+  info: "modal-info",
+  error: "modal-error",
+  success: "modal-success",
+  warning: "modal-warning",
+  loading: "modal-loading",
+};

@@ -6,6 +6,24 @@
   bottom: 0;
   z-index: 1005;
   pointer-events: none;
+  
+  &.modal-info{
+    border: 1px solid var(--info);
+    color: var(--info);
+  }
+  &.modal-error{
+    border: 1px solid var(--danger);
+    color: var(--danger);
+  }
+  &.modal-success{
+    border: 1px solid var(--success);
+    color: var(--success);
+  } 
+  &.modal-warning{
+    border: 1px solid var(--warning);
+    color: var(--warning);
+  }
+ 
 
   .c-modal-content {
     position: relative;
@@ -49,7 +67,7 @@
     .c-modal-footer {
       text-align: right;
 
-      .c-modal-btn{
+      .c-btn{
         margin-left: 10px;
       }
     }
