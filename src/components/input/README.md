@@ -13,8 +13,8 @@ tag: Data Entry
 :::demo
 ```html
 <template>
-  <x-input placeholder="请输入" type="text" v-model="value" />
-  <x-input placeholder="请输入" type="password" v-model="value" style="margin-left:5px" />
+  <c-input placeholder="请输入" type="text" v-model="value" />
+  <c-input placeholder="请输入" type="password" v-model="value" style="margin-left:5px" />
   <div style="margin-top: 10px">
     输入框值：{{value}}
   </div>
@@ -41,7 +41,7 @@ export default {
 :::demo
 ```html
 <template>
-  <x-input placeholder="请输入" type="text" disabled />
+  <c-input placeholder="请输入" type="text" disabled />
 </template>
 ```
 :::
@@ -52,8 +52,8 @@ export default {
 :::demo
 ```html
 <template>
-  <x-input placeholder="请输入" icon-before="x-icon-search" />
-  <x-input placeholder="请输入" icon-after="x-icon-calendar" style="margin-left:5px" />
+  <c-input placeholder="请输入" icon-before="x-icon-search" />
+  <c-input placeholder="请输入" icon-after="x-icon-calendar" style="margin-left:5px" />
 </template>
 ```
 :::
@@ -65,7 +65,7 @@ export default {
 :::demo
 ```html
 <template>
-  <x-input placeholder="请输入" clearable />
+  <c-input placeholder="请输入" clearable />
 </template>
 ```
 :::
@@ -76,7 +76,7 @@ export default {
 :::demo `maxlength` 可以限制 `textarea` 的输入长度
 ```html
 <template>
-  <x-input placeholder="请输入" style="width: 350px" type="textarea" rows="7" cols="20" :maxlength="40" />
+  <c-input placeholder="请输入" style="width: 350px" type="textarea" rows="7" cols="20" :maxlength="40" />
 </template>
 
 ```

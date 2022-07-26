@@ -6,7 +6,7 @@
 
   <c-button type="primary" size="mini">primary</c-button>
   <c-button type="info" size="mini" circle>info</c-button>
-  <c-button type="text" size="mini">success</c-button>
+  <c-button type="text" size="mini" >success</c-button>
   <c-button type="warning" size="mini" icon="c-icon-link"></c-button>
   <c-button type="danger" size="mini" @click="clickBtn">danger</c-button>
   <c-button type="danger" size="mini" plain>plain</c-button>
