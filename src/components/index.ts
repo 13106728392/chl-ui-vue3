@@ -7,11 +7,13 @@ import Input from './input'
 import Modal from './modal'
 import Col from './col'
 import Row from './row'
+import Carousel from './carousel'
+import CarouselItem from './carousel-item'
 import '../theme/index.less'
 
 
 
-const components = [Button,Icon,Switch,Input,Col,Row]
+const components = [Button,Icon,Switch,Input,Col,Row,Carousel,CarouselItem]
 
 
 const install = (app: App) => {
