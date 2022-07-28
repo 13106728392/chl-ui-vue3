@@ -5,11 +5,13 @@ import Message from './message'
 import Switch from './Switch'
 import Input from './input'
 import Modal from './modal'
+import Col from './col'
+import Row from './row'
 import '../theme/index.less'
 
 
 
-const components = [Button,Icon,Switch,Input]
+const components = [Button,Icon,Switch,Input,Col,Row]
 
 
 const install = (app: App) => {
