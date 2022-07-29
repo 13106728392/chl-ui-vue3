@@ -53,7 +53,7 @@
   
 
   <div class="components-grid-demo">
-    <c-carousel width="500px" height="250px">
+    <c-carousel width="500px" height="250px" autoplay>
       <c-carousel-item :class="`color${item}`" :key="item" v-for="item in 4">
         {{ item }}
       </c-carousel-item>
@@ -80,7 +80,7 @@ const clickBtn = () => {
 
 const state1 = ref(false);
 const instance = getCurrentInstance();
-const { $message, $modal } = instance.appContext.config.globalProperties;
+const { $message, $modal } = instance?.appContext.config.globalProperties;
 const defaultChange = (val) => {
   console.log(val);
 };
@@ -128,12 +128,15 @@ const handerClick1 = () => {
   display: block;
 }
 .color1 {
-  background-color: rgb(16, 123, 173);
+  background-color: rgb(108, 250, 153);
 }
 .color2 {
-  background-color: rgb(31, 137, 158);
+  background-color: rgb(89, 211, 235);
 }
 .color3 {
-  background-color: rgb(89, 173, 198);
+  background-color: rgb(249, 211, 107);
+}
+.color4 {
+  background-color: rgb(247, 122, 77);
 }
 </style>
