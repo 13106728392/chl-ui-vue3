@@ -17,6 +17,7 @@ import {
 } from "vue";
 import emitter from "../../utils/emiter";
 const props = defineEmits({});
+// 被触发
 const inActive = inject("carousel-active");
 const inName = inject("carousel-name");
 // 获取当前实例
