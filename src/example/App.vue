@@ -77,7 +77,7 @@
     </c-menu>
   </div>
    <div class="components-grid-demo">
-    <c-menu width="200">
+    <c-menu width="200" :uniqueOpened="true">
       <c-menu-item name="1">导航一</c-menu-item>
       <c-sub-menu name="2">
         <template #title>导航二</template>

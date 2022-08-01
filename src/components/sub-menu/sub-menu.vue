@@ -56,9 +56,9 @@ watch(menu?.currName, (value) => {
     if (value !== name?.value) {
       isActive.value = false;
     }
-    if (isChild.value === value) {
-      isActive.value = true;
-    }
+    // if (isChild.value === value) {
+    //   isActive.value = true;
+    // }
   }
 });
 
