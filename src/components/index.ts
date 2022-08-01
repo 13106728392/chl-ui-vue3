@@ -9,11 +9,16 @@ import Col from './col'
 import Row from './row'
 import Carousel from './carousel'
 import CarouselItem from './carousel-item'
+import Cmenu from './menu'
+import CmenuItem from './menu-item'
+import CmenuItemGroup from './menu-item-group'
 import '../theme/index.less'
 
 
 
-const components = [Button,Icon,Switch,Input,Col,Row,Carousel,CarouselItem]
+
+const components = [Button, Icon, Switch, Input, Col, Row, Carousel, CarouselItem, Cmenu, CmenuItem, CmenuItemGroup]
+
 
 
 const install = (app: App) => {
@@ -27,5 +32,5 @@ const install = (app: App) => {
 
 export default {
   install,
-  ... components
+  ...components
 }

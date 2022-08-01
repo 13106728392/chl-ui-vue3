@@ -1,3 +1,4 @@
+
 export default function () {
   const arr = new Map();
   const cached = {};
@@ -38,3 +39,4 @@ export default function () {
     off
   };
 }
+

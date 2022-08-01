@@ -1,9 +1,8 @@
+import element from './menu-item.vue'
 
-import element from './carousel.vue'
-element.name = 'c-carousel'
+element.name = 'c-menu-item'
 element.install = function(app) {
   app.component(element.name, element)
 }
 
 export default element
-

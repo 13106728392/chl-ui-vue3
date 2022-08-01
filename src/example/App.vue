@@ -1,3 +1,4 @@
+
 <template>
   <c-input placeholder="请输入" clearable @change="changeText" />
 
@@ -10,13 +11,9 @@
   <c-button type="danger" size="mini" @click="clickBtn">danger</c-button>
   <c-button type="danger" size="mini" plain>plain</c-button>
 
-  <c-button type="danger" size="mini" @click="handerClick" plain
-    >Message</c-button
-  >
+  <c-button type="danger" size="mini" @click="handerClick" plain>Message</c-button>
 
-  <c-button type="success" size="mini" @click="handerClick1" plain
-    >success</c-button
-  >
+  <c-button type="success" size="mini" @click="handerClick1" plain>success</c-button>
 
   <c-switch v-model="state1">switch</c-switch>
   <c-switch type="warning" v-model="state1" @change="defaultChange('switch2')">
@@ -50,14 +47,35 @@
       <c-col :span="8" class="color2">8: 33.33%</c-col>
     </c-row>
   </div>
-  
+
 
   <div class="components-grid-demo">
-    <c-carousel width="500px" height="250px">
+    <c-carousel width="500px" height="250px" autoplay>
       <c-carousel-item :class="`color${item}`" :key="item" v-for="item in 4">
         {{ item }}
       </c-carousel-item>
     </c-carousel>
+  </div>
+
+  <div class="components-grid-demo">
+    <c-menu mode="horizontal">
+      <c-menu-item name="1">导航一</c-menu-item>
+      <x-sub-menu name="2">
+        <template #title>导航二</template>
+        <c-menu-item-group title="小标题">
+          <c-menu-item name="2-1">子菜单一</c-menu-item>
+          <c-menu-item name="2-2">子菜单二</c-menu-item>
+        </c-menu-item-group>
+      </x-sub-menu>
+      <x-sub-menu name="3">
+        <template #title>导航三</template>
+        <c-menu-item-group>
+          <c-menu-item name="3-1">子菜单一</c-menu-item>
+          <c-menu-item name="3-2">子菜单二</c-menu-item>
+        </c-menu-item-group>
+      </x-sub-menu>
+      <c-menu-item name="4">导航四</c-menu-item>
+    </c-menu>
   </div>
 </template>
 
@@ -80,7 +98,7 @@ const clickBtn = () => {
 
 const state1 = ref(false);
 const instance = getCurrentInstance();
-const { $message, $modal } = instance.appContext.config.globalProperties;
+const { $message, $modal } = instance?.appContext.config.globalProperties;
 const defaultChange = (val) => {
   console.log(val);
 };
@@ -121,19 +139,26 @@ const handerClick1 = () => {
 };
 </script>
 <style lang="less" scoped>
-.components-grid-demo{
+.components-grid-demo {
   width: 100%;
   overflow: hidden;
   margin-top: 20px;
   display: block;
 }
+
 .color1 {
-  background-color: rgb(16, 123, 173);
+  background-color: rgb(108, 250, 153);
 }
+
 .color2 {
-  background-color: rgb(31, 137, 158);
+  background-color: rgb(89, 211, 235);
 }
+
 .color3 {
-  background-color: rgb(89, 173, 198);
+  background-color: rgb(249, 211, 107);
+}
+
+.color4 {
+  background-color: rgb(247, 122, 77);
 }
 </style>
