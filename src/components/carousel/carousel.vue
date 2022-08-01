@@ -1,3 +1,4 @@
+
 <template>
   <div class="c-carousel" :style="`width:${width}; height: ${height}`" @mouseover="mouseover" @mouseleave="mouseleave">
     <div class="c-carousel-left" @click="setCarousel(-1, 'slide-left')">
@@ -123,4 +124,3 @@ onUnmounted(() => {
 
 
 </script>
->>>>>>> 74711489cc3d1ebff9a0804218464d215464a54f

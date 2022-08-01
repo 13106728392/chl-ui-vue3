@@ -15,7 +15,7 @@
       z-index: 1;
 
       &.is-active {
-        color: rgb(var(--primary));
+        color: var(--primary);
         transition: color .4s ease;
         
         &::after{
@@ -24,7 +24,7 @@
           bottom: -1px;
           right: 0;
           display: block;
-          background-color: rgb(var(--primary));
+          background-color: var(--primary);
           height: 3px;
           width: 100%;
         }
@@ -35,7 +35,7 @@
         left: 0;
         background-color: var(--main-background-color);
         border-radius: 4px;
-        boc-shadow: 0 0 8px var(--shadow);
+        box-shadow: 0 0 8px var(--shadow);
         overflow: hidden;
         min-width: 100%;
         margin-top: 3px;
@@ -81,7 +81,7 @@
   }
 
   &>.c-menu-item:hover {
-    color: rgb(var(--primary));
+    color: var(--primary);
   }
 
   &>.c-menu-item {
@@ -103,7 +103,7 @@
         bottom: -1px;
         right: 0;
         display: block;
-        background-color: rgb(var(--primary));
+        background-color: var(--primary);
         height: 100%;
         width: 3px;
       }
