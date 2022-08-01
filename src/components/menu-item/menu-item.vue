@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { getCurrentInstance, provide, ref, toRefs,defineProps,inject } from 'vue'
+import { getCurrentInstance, provide, ref, toRefs,defineProps,inject ,computed} from 'vue'
 import emiter from '../../utils/emiter'
 
 name: 'MenuItem'
@@ -19,7 +19,7 @@ const menu = inject('menu', { props: {} })
 
 const { dispatch } = emiter()
 
-
+const isActive = computed(() => menu.currName.value === name.value)
 const handleClick = () => {
     dispatch('item-click',name?.value)
 }
