@@ -1,7 +1,7 @@
 {
   "name": "chl-ui-vue3",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.5",
   "keywords": [
     "vue3",
     "calendar"
@@ -9,12 +9,20 @@
   "files": [
     "dist"
   ],
-  "main": "index.js",
-  "style": "./dist/style.css",
+  "main": "./dist/chl.umd.js", 
+  "module": "./dist/chl.es.js", 
+  "exports": {
+    "./dist/style.css":"./dist/style.css", 
+    ".":{
+      "import" : "./dist/chl.es.js",
+      "require": "./dist/chl.umd.js"
+    }
+  }, 
   "license": "ISC",
   "scripts": {
     "dev": "vite --host --open",
-    "build": "vite build",
+    "build-lib": "vite build ",
+    "build-page": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -1,28 +1,37 @@
 import { defineConfig } from 'vite'
-import path from "path";
+import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+
   plugins: [vue()],
+  // base:  'chl-ui-vue3/',
   build: {
-    lib: {
-      entry: path.resolve(__dirname, 'src/components/index.ts'),
-      name: 'ChlUi',
-      fileName: (format) => `chl.${format}.js`
-    },
     rollupOptions: {
+      // input: {
+        // main: resolve(__dirname, 'index.html'),
+        // nested: resolve(__dirname, 'nested/index.html')
+      // },
       external: ['vue'],
       output: {
         globals: {
           vue: 'Vue'
         }
       }
-    }
+    },
+    // 构建库模式打包
+    lib: {
+      // 构建入口
+      entry: resolve(__dirname, 'src/components/index.ts'),
+      name: 'ChlUi',
+      fileName: (format) => `chl.${format}.js`
+    },
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src"),
+      "chl-ui-vue3":resolve(__dirname, 'chl-ui-vue3'),
+      "@": resolve(__dirname, "src"),
     },
     extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"],
   },
