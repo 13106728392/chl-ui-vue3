@@ -19,7 +19,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 
-// 引入RelaxPlus
+// 引入Chlui
 import Chlui from 'chl-ui-vue3'
 import 'chl-ui-vue3/dist/style.css'
 
@@ -53,3 +53,6 @@ yarn lib
 ## 浏览器支持
 仅支持现代浏览器
 
+
+## 说明文档
+    编写ing...

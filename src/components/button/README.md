@@ -5,7 +5,7 @@ tag: General
 
 # Button 按钮
 
-> 帅气的 Button
+>  Button
 
 ## 演示
 
