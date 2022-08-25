@@ -9,15 +9,15 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/chl.umd.js", 
-  "module": "./dist/chl.es.js", 
+  "main": "./dist/chl.umd.js",
+  "module": "./dist/chl.es.js",
   "exports": {
-    "./dist/style.css":"./dist/style.css", 
-    ".":{
-      "import" : "./dist/chl.es.js",
+    "./dist/style.css": "./dist/style.css",
+    ".": {
+      "import": "./dist/chl.es.js",
       "require": "./dist/chl.umd.js"
     }
-  }, 
+  },
   "license": "ISC",
   "scripts": {
     "dev": "vite --host --open",
@@ -27,10 +27,20 @@
   },
   "dependencies": {
     "@vue/cli-plugin-babel": "^5.0.7",
+    "happy-dom": "^6.0.4",
+    "html-loader": "^4.1.0",
     "less": "^4.1.3",
     "less-loader": "^11.0.0",
+    "markdown-it-container": "^3.0.0",
+    "markdown-it-prism": "^2.2.5",
+    "markdown-loader": "^8.0.0",
+    "marked": "^4.0.19",
     "pinia": "^2.0.14",
-    "vue": "^3.2.25"
+    "vite-plugin-inspect": "^0.6.0",
+    "vite-plugin-md": "^0.20.2",
+    "vite-plugin-pages": "^0.25.0",
+    "vue": "^3.2.25",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",

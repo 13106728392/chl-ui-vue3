@@ -4,21 +4,24 @@ tag: General
 ---
 
 # Icon 图标
+
 > 语义化的矢量图形
 
 ## 演示
+
 > 直接通过设置类名为 `c-icon-iconName` 来使用即可。例如：
-:::demo
+
+
 ```html
 <template>
   <c-icon type="c-icon-star-on"></c-icon>
   <c-icon type="c-icon-link"></c-icon>
 </template>
 ```
-:::
 
 
 ## 图标集合
+
 > 内置了许多的图标
 
 <c-row class="icon-list">
