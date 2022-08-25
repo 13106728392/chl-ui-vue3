@@ -25,12 +25,12 @@ import 'chl-ui-vue3/dist/style.css'
 
 createApp(App)
 .use(router)
-.use(ChlUi) // 注册到Vue中
+.use(Chlui) // 注册到Vue中
 .mount('#app')
 ```
 ## 注意
 ```
-    尽量使用vue3架构项目运行
+尽量使用vue3架构项目运行
 ```
 
 
