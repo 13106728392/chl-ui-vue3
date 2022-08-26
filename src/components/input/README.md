@@ -12,7 +12,7 @@ tag: Data Entry
 ## 演示
 
 > 使用 `v-model` 实现数据的双向绑定
-:::demo
+
 
 ```html
 <template>
@@ -37,12 +37,12 @@ export default {
 </script>
 ```
 
-:::
+
 
 ## 禁用
 
 > 通过 `disabled` 属性指定是否禁用 input 组件
-:::demo
+
 
 ```html
 <template>
@@ -50,12 +50,12 @@ export default {
 </template>
 ```
 
-:::
+
 
 ## 前缀和后缀图标
 
 > 通过设置 `icon-before` 和 `icon-after` 设置前缀及后缀图标
-:::demo
+
 
 ```html
 <template>
@@ -64,12 +64,12 @@ export default {
 </template>
 ```
 
-:::
+
 
 ## 可清空
 
 > 通过设置 `clearable` 可以开启输入框的清空
-:::demo
+
 
 ```html
 <template>
@@ -77,12 +77,12 @@ export default {
 </template>
 ```
 
-:::
+
 
 ## 文本域
 
 > 设置 `type` 属性为 `textarea`
-:::demo `maxlength` 可以限制 `textarea` 的输入长度
+ `maxlength` 可以限制 `textarea` 的输入长度
 
 ```html
 <template>
@@ -91,4 +91,4 @@ export default {
 
 ```
 
-:::
+

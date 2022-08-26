@@ -8,7 +8,7 @@ tag: Data Display
 
 ## 演示
 > 默认
-:::demo
+
 ```html
 <template>
   <c-carousel width="500px" height="250px">
@@ -18,12 +18,12 @@ tag: Data Display
   </c-carousel>
 </template>
 ```
-:::
+
 
 
 ## 自动播放
 > 设置 `autoplay` 开启自动播放
-:::demo
+
 ```html
 <template>
   <c-carousel width="500px" height="250px" autoplay>
@@ -33,4 +33,3 @@ tag: Data Display
   </c-carousel>
 </template>
 ```
-:::

@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import {createPinia} from 'pinia'
 import '../src/theme/index.less' 
+import './style/docs.less'
 import router from './router'
 import Chl from '../src/components'
 

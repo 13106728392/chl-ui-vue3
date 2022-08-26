@@ -31,7 +31,7 @@ export default {
 
     const setMenu = () => {
       menu.length = 0
-      let h2 = document.querySelectorAll('.relax-doc [id]')
+      let h2 = document.querySelectorAll('.chl-doc [id]')
       if (h2.length) {
         Array.from(h2).forEach((item) => {
           menu.push({

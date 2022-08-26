@@ -8,7 +8,7 @@ tag: Data Entry
 
 ## 演示
 > 切换状态时，触发事件
-:::demo 当状态改变时，会触发 `change` 事件
+ 当状态改变时，会触发 `change` 事件
 ```html
 <template>
    <c-switch v-model="state1"></c-switch>
@@ -38,12 +38,12 @@ export default {
 }
 </script>
 ```
-:::
+
 
 
 ## 文字和图标
 > 自定义内容, 建议文字长度保持统一
-:::demo 使用 `open` 和 `close` 插槽
+ 使用 `open` 和 `close` 插槽
 ```html
 <template>
   <c-switch v-model="state1">
@@ -83,11 +83,11 @@ export default {
 }
 </script>
 ```
-:::
+
 
 ## 不同色系
 > 提供了 `primary` `info` `danger` `success` `warning` 五种颜色， 默认`primary`
-:::demo
+
 ```html
 <template>
   <c-switch v-model="state1" type="primary"></c-switch>
@@ -118,12 +118,12 @@ export default {
 }
 </script>
 ```
-:::
+
 
 
 ## 不可点击
 > 禁止点击状态
-:::demo
+
 ```html
 <template>
   <c-switch v-model="state" :disabled="disabled"></c-switch>
@@ -145,4 +145,3 @@ export default {
 }
 </script>
 ```
-:::

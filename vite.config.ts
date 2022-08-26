@@ -15,6 +15,7 @@ const mdConfig = require('./md.config');
 
 
 export default defineConfig({
+  base:'/chl-ui-vue3/',
   plugins: [
     vue({
       include: [/\.vue$/, /\.md$/], 
@@ -25,7 +26,6 @@ export default defineConfig({
         linkify: true,
         typographer: true,
         xhtmlOut: true,
-        overlay:false
         // 高亮配置
         // highlight: (str: any, lang: any) => {
         //   if (lang && hljs.getLanguage(lang)) {
@@ -44,7 +44,8 @@ export default defineConfig({
         // md.use(require('markdown-it-anchor'))
         // md.use(require('markdown-it-prism'))
       },
-      wrapperClasses: 'markdown-container',
+      // 添加md文件默认样式
+      wrapperClasses: 'markdown-container chl-doc',
     }),
     Pages({
       pagesDir: 'pages',
@@ -55,24 +56,25 @@ export default defineConfig({
   // base:  'chl-ui-vue3/',
   build: {
     rollupOptions: {
-      // input: {
-      // main: resolve(__dirname, 'index.html'),
+      input: {
+      main: resolve(__dirname, 'index.html'),
       // nested: resolve(__dirname, 'nested/index.html')
-      // },
-      external: ['vue'],
-      output: {
-        globals: {
-          vue: 'Vue'
-        }
-      }
+      },
+      // 告诉打包工具这是是外部依赖项 
+      // external: ['vue'],
+      // output: {
+      //   globals: {
+      //     vue: 'Vue'
+      //   }
+      // }
     },
     // 构建库模式打包
-    lib: {
-      // 构建入口
-      entry: resolve(__dirname, 'src/components/index.ts'),
-      name: 'ChlUi',
-      fileName: (format) => `chl.${format}.js`
-    },
+    // lib: {
+    //   // 构建入口
+    //   entry: resolve(__dirname, 'src/components/index.ts'),
+    //   name: 'ChlUi',
+    //   fileName: (format) => `chl.${format}.js`
+    // },
   },
   resolve: {
     alias: {

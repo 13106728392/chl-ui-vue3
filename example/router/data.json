@@ -1,5 +1,6 @@
 {"data":[
   {
+    "done":"flase",
     "title": "Badge 徽标",
     "tag": "Data Display",
     "componentName": "badge",
@@ -7,6 +8,7 @@
     "routePath": "/badge"
   },
   {
+    "done":"true",
     "title": "Button 按钮",
     "tag": "General",
     "componentName": "button",
@@ -14,6 +16,7 @@
     "routePath": "/button"
   },
   {
+    "done":"flase",
     "title": "Calendar 日历",
     "tag": "Data Display",
     "componentName": "calendar",
@@ -21,6 +24,7 @@
     "routePath": "/calendar"
   },
   {
+    "done":"true",
     "title": "Carousel 轮播",
     "tag": "Data Display",
     "componentName": "carousel",
@@ -28,6 +32,7 @@
     "routePath": "/carousel"
   },
   {
+    "done":"flase",
     "title": "Checkbox 多选框",
     "tag": "Data Entry",
     "componentName": "checkbox",
@@ -35,6 +40,7 @@
     "routePath": "/checkbox"
   },
   {
+    "done":"flase",
     "title": "DatePicker 日期选择",
     "tag": "Data Entry",
     "componentName": "date-picker",
@@ -42,6 +48,7 @@
     "routePath": "/date-picker"
   },
   {
+    "done":"flase",
     "title": "Drawer 抽屉",
     "tag": "Feedback",
     "componentName": "drawer",
@@ -49,6 +56,7 @@
     "routePath": "/drawer"
   },
   {
+    "done":"true",
     "title": "Icon 图标",
     "tag": "General",
     "componentName": "icon",
@@ -56,6 +64,7 @@
     "routePath": "/icon"
   },
   {
+    "done":"true",
     "title": "Input 输入框",
     "tag": "Data Entry",
     "componentName": "input",
@@ -63,6 +72,7 @@
     "routePath": "/input"
   },
   {
+    "done":"true",
     "title": "Menu 导航菜单",
     "tag": "Navigation",
     "componentName": "menu",
@@ -70,6 +80,7 @@
     "routePath": "/menu"
   },
   {
+    "done":"flase",
     "title": "Message 消息",
     "tag": "Feedback",
     "componentName": "message",
@@ -77,6 +88,7 @@
     "routePath": "/message"
   },
   {
+    "done":"flase",
     "title": "Modal 对话框",
     "tag": "Feedback",
     "componentName": "modal",
@@ -84,19 +96,16 @@
     "routePath": "/modal"
   },
   {
+    "done":"flase",
     "title": "Notice 通知",
     "tag": "Feedback",
     "componentName": "notice",
     "componentPath": "notice/README.md",
     "routePath": "/notice"
   },
+ 
   {
-    "title": "快速上手",
-    "componentName": "quick-start",
-    "componentPath": "quick-start/README.md",
-    "routePath": "/quick-start"
-  },
-  {
+    "done":"flase",
     "title": "Radio 单选框",
     "tag": "Data Entry",
     "componentName": "radio",
@@ -104,6 +113,7 @@
     "routePath": "/radio"
   },
   {
+    "done":"true",
     "title": "Grid 栅格",
     "tag": "Layout",
     "componentName": "row",
@@ -111,6 +121,7 @@
     "routePath": "/row"
   },
   {
+    "done":"flase",
     "title": "Scroll 滚动",
     "tag": "Others",
     "componentName": "scroll",
@@ -118,6 +129,7 @@
     "routePath": "/scroll"
   },
   {
+    "done":"flase",
     "title": "Select 选择",
     "tag": "Data Entry",
     "componentName": "select",
@@ -125,6 +137,7 @@
     "routePath": "/select"
   },
   {
+    "done":"flase",
     "title": "Slider 滑动块",
     "tag": "Data Entry",
     "componentName": "slider",
@@ -132,6 +145,7 @@
     "routePath": "/slider"
   },
   {
+    "done":"flase",
     "title": "Steps 步骤条",
     "tag": "General",
     "componentName": "steps",
@@ -139,6 +153,7 @@
     "routePath": "/steps"
   },
   {
+    "done":"true",
     "title": "Switch 开关",
     "tag": "Data Entry",
     "componentName": "switch",
@@ -146,6 +161,7 @@
     "routePath": "/switch"
   },
   {
+    "done":"flase",
     "title": "Tabs 标签页",
     "tag": "Data Display",
     "componentName": "tabs",
@@ -153,6 +169,7 @@
     "routePath": "/tabs"
   },
   {
+    "done":"flase",
     "title": "Tooltip 文字提示",
     "tag": "General",
     "componentName": "tooltip",

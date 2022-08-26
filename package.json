@@ -9,15 +9,8 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/chl.umd.js",
-  "module": "./dist/chl.es.js",
-  "exports": {
-    "./dist/style.css": "./dist/style.css",
-    ".": {
-      "import": "./dist/chl.es.js",
-      "require": "./dist/chl.umd.js"
-    }
-  },
+  "main": "./dist",
+  
   "license": "ISC",
   "scripts": {
     "dev": "vite --host --open",

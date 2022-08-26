@@ -2,102 +2,44 @@
   <div class="wrapper">
     <div class="sidebar-nav">
       <div class="sidebar-menu">
-        <teleport to="body">
-          <router-link to="/" title="">
-            <div class="logo-img"></div>
-          </router-link>
-        </teleport>
-
-        <x-scroll>
-          <div v-for="(menu, i) in nav" class="menu" :key="i">
-            <dl v-if="menu.child">
-              <dt># {{ menu.title }}</dt>
-              <dd v-for="(submenu, k) in menu.child" :key="i + k">
-                <router-link :to="submenu.routePath">{{
+        <div v-for="(menu, i) in nav" class="menu" :key="i">
+          <dl v-if="menu.child">
+            <dt># {{ menu.title }}</dt>
+            <dd class="navItem" v-for="(submenu, k) in menu.child" :key="i + k">
+              <router-link :to="submenu.done=='true' ? submenu.routePath : '' " :class="submenu.done=='true' ? 'isclick' : 'noclick' ">{{
                   submenu.title
-                }}</router-link>
-              </dd>
-            </dl>
-            <router-link v-else :to="menu.routePath">{{
+              }}</router-link>
+            </dd>
+          </dl>
+          <router-link v-else :to="menu.routePath">{{
               menu.title
-            }}</router-link>
-          </div>
-        </x-scroll>
+          }}</router-link>
+        </div>
       </div>
     </div>
-
-    <View />
-  </div>
-  <div class="content-menu">
-    <x-badge :count="`alpha ${version}`" />
-    <x-tooltip content="去仓库" placement="bottom">
-      <a
-        href="https://github.com/yanghuanrong/RelaxPlus"
-        target="__blank"
-        class="item"
-      >
-        <i class="x-icon-github"></i>
-      </a>
-    </x-tooltip>
-    <x-tooltip content="两极反转" placement="bottom-end">
-      <div class="item" @click="handleToggle">
-        <i v-if="toggle" class="x-icon-sun"></i>
-        <i v-else class="x-icon-moon"></i>
-      </div>
-    </x-tooltip>
+    <showView />
   </div>
 </template>
 
 <script>
 import routes from './router/data'
-import View from './views/View'
+import showView from './views/View'
 import { ref } from 'vue'
 import pkg from '../package.json'
 
 export default {
   components: {
-    View,
+    showView,
   },
   setup() {
     const nav = useNav()
-
-    const { toggle, handleToggle } = useToggle()
-
     return {
       nav,
-      toggle,
-      handleToggle,
       version: pkg.version,
     }
   },
 }
 
-const useToggle = () => {
-  const theme = localStorage.getItem('color-mode')
-  const DARK = 'dark'
-  const LIGHT = 'light'
-  const toggle = ref(theme === DARK)
-
-  const setToggle = () => {
-    if (toggle.value) {
-      localStorage.setItem('color-mode', DARK)
-      document.documentElement.setAttribute('data-color-mode', DARK)
-    } else {
-      localStorage.setItem('color-mode', LIGHT)
-      document.documentElement.setAttribute('data-color-mode', LIGHT)
-    }
-  }
-  const handleToggle = () => {
-    toggle.value = !toggle.value
-    setToggle()
-  }
-  setToggle()
-
-  return {
-    toggle,
-    handleToggle,
-  }
-}
 
 const useNav = () => {
   const menu = []
@@ -124,7 +66,67 @@ const useNav = () => {
       menu.push(item)
     }
   })
-
   return menu.concat(submenu)
 }
 </script>
+
+<style lang="less">
+.sidebar-nav {
+  overflow: auto;
+  width: 200px;
+  padding:0 10px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0px;
+
+
+  transition: background-color .3s ease;
+
+  dt {
+    color: #98a6ad;
+    padding: 8px 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #98a6ad;
+  }
+   dd {
+     width: 100%;
+     margin: 0;
+     .isclick{}
+     .noclick{
+      text-decoration:line-through
+     }
+      a {
+        font-size: 14px;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        text-decoration: none;
+        color: #000;
+        padding: 8px 10px;
+        text-align: left;
+        margin: 4px 0;
+      }
+      transition: background-color .3s ease;
+      &:hover {
+        background-color: rgb(#000 0.1);
+      }
+    }
+
+}
+
+.content-page {
+  // width: 100%;
+  position: absolute;
+  height: 100%;
+  overflow: auto;
+  background-color: #f4f5f5;
+      padding: 35px;
+    padding-right: 160px;
+  right: 0;
+  left: 200px;
+  top: 0;
+  bottom: 0;
+}
+</style>
