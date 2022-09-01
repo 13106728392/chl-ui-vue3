@@ -1,4 +1,4 @@
-import{d as e,c as u,o as n,a as o}from"./index.5f1b703d.js";const c={class:"markdown-container chl-doc"},s=o(`<h1>Switch \u5F00\u5173</h1><blockquote><p>\u5F00\u5173\u9009\u62E9\u5668</p></blockquote><h2>\u6F14\u793A</h2><blockquote><p>\u5207\u6362\u72B6\u6001\u65F6\uFF0C\u89E6\u53D1\u4E8B\u4EF6 \u5F53\u72B6\u6001\u6539\u53D8\u65F6\uFF0C\u4F1A\u89E6\u53D1 <code class="">change</code> \u4E8B\u4EF6</p></blockquote><pre><code class="language-html">&lt;template&gt;
+import{d as e,c as u,o as n,a as c}from"./index.bc64ced0.js";const o={class:"markdown-container chl-doc"},s=c(`<h1>Switch \u5F00\u5173</h1><blockquote><p>\u5F00\u5173\u9009\u62E9\u5668</p></blockquote><h2>\u6F14\u793A</h2><blockquote><p>\u5207\u6362\u72B6\u6001\u65F6\uFF0C\u89E6\u53D1\u4E8B\u4EF6 \u5F53\u72B6\u6001\u6539\u53D8\u65F6\uFF0C\u4F1A\u89E6\u53D1 <code class="">change</code> \u4E8B\u4EF6</p></blockquote><pre><code class="language-html">&lt;template&gt;
    &lt;c-switch v-model=&quot;state1&quot;&gt;&lt;/c-switch&gt;
    &lt;c-switch v-model=&quot;state2&quot; @change=&quot;change&quot;&gt;&lt;/c-switch&gt; 
 &lt;/template&gt;
@@ -38,10 +38,10 @@ export default {
 
   &lt;c-switch v-model=&quot;state3&quot;&gt;
     &lt;template #open&gt;
-      &lt;x-icon type=&quot;x-icon-check&quot;/&gt;
+      &lt;c-icon type=&quot;c-icon-check&quot;/&gt;
     &lt;/template&gt;
     &lt;template #close&gt;
-      &lt;x-icon type=&quot;x-icon-x&quot; /&gt;
+      &lt;c-icon type=&quot;c-icon-x&quot; /&gt;
     &lt;/template&gt;
   &lt;/c-switch&gt;
 &lt;/template&gt;
@@ -92,7 +92,7 @@ export default {
 &lt;/script&gt;
 </code></pre><h2>\u4E0D\u53EF\u70B9\u51FB</h2><blockquote><p>\u7981\u6B62\u70B9\u51FB\u72B6\u6001</p></blockquote><pre><code class="language-html">&lt;template&gt;
   &lt;c-switch v-model=&quot;state&quot; :disabled=&quot;disabled&quot;&gt;&lt;/c-switch&gt;
-  &lt;x-button @click=&quot;disabled = !disabled&quot;&gt;{{ disabled ? &#39;\u6FC0\u6D3B&#39; : &#39;\u7981\u6B62&#39; }}&lt;/x-button&gt;
+  &lt;c-button @click=&quot;disabled = !disabled&quot;&gt;{{ disabled ? &#39;\u6FC0\u6D3B&#39; : &#39;\u7981\u6B62&#39; }}&lt;/x-button&gt;
 &lt;/template&gt;
 
 &lt;script&gt;
@@ -109,4 +109,4 @@ export default {
   }
 }
 &lt;/script&gt;
-</code></pre>`,14),l=[s],i={title:"Switch \u5F00\u5173",tag:"Data Entry"},d="",m=e({__name:"README",setup(a,{expose:t}){return t({frontmatter:{title:"Switch \u5F00\u5173",tag:"Data Entry"},excerpt:void 0}),(r,p)=>(n(),u("div",c,l))}});export{m as default,d as excerpt,i as frontmatter};
+</code></pre>`,14),l=[s],i={title:"Switch \u5F00\u5173",tag:"Data Entry"},d="",m=e({__name:"README",setup(a,{expose:t}){return t({frontmatter:{title:"Switch \u5F00\u5173",tag:"Data Entry"},excerpt:void 0}),(r,p)=>(n(),u("div",o,l))}});export{m as default,d as excerpt,i as frontmatter};

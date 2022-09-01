@@ -1,4 +1,4 @@
-import{d as u,c as e,o,a as c}from"./index.5f1b703d.js";const a={class:"markdown-container chl-doc"},l=c(`<h1>Carousel \u8F6E\u64AD</h1><blockquote><p>\u4EE5\u8F6E\u64AD\u7684\u65B9\u5F0F\u663E\u793A\u4E00\u7EC4\u5143\u7D20\uFF0C\u975E\u5E38\u7ECF\u5178</p></blockquote><h2>\u6F14\u793A</h2><blockquote><p>\u9ED8\u8BA4</p></blockquote><pre><code class="language-html">&lt;template&gt;
+import{d as u,c as e,o,a as c}from"./index.bc64ced0.js";const a={class:"markdown-container chl-doc"},l=c(`<h1>Carousel \u8F6E\u64AD</h1><blockquote><p>\u4EE5\u8F6E\u64AD\u7684\u65B9\u5F0F\u663E\u793A\u4E00\u7EC4\u5143\u7D20\uFF0C\u975E\u5E38\u7ECF\u5178</p></blockquote><h2>\u6F14\u793A</h2><blockquote><p>\u9ED8\u8BA4</p></blockquote><pre><code class="language-html">&lt;template&gt;
   &lt;c-carousel width=&quot;500px&quot; height=&quot;250px&quot;&gt;
     &lt;c-carousel-item class=&quot;demo-carousel&quot; v-for=&quot;item in 4&quot;&gt;
       {{item}}

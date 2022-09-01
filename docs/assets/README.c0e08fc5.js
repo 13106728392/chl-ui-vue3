@@ -1,4 +1,4 @@
-import{d as t,c as e,o,a as l}from"./index.5f1b703d.js";const c={class:"markdown-container chl-doc"},a=l(`<h1>Input \u8F93\u5165\u6846</h1><blockquote><p>\u901A\u8FC7\u9F20\u6807\u6216\u952E\u76D8\u8F93\u5165\u5185\u5BB9\uFF0C\u662F\u6700\u57FA\u7840\u7684\u8868\u5355\u57DF\u7684\u5305\u88C5</p></blockquote><h2>\u6F14\u793A</h2><blockquote><p>\u4F7F\u7528 <code class="">v-model</code> \u5B9E\u73B0\u6570\u636E\u7684\u53CC\u5411\u7ED1\u5B9A</p></blockquote><pre><code class="language-html">&lt;template&gt;
+import{d as t,c as e,o,a as l}from"./index.bc64ced0.js";const c={class:"markdown-container chl-doc"},a=l(`<h1>Input \u8F93\u5165\u6846</h1><blockquote><p>\u901A\u8FC7\u9F20\u6807\u6216\u952E\u76D8\u8F93\u5165\u5185\u5BB9\uFF0C\u662F\u6700\u57FA\u7840\u7684\u8868\u5355\u57DF\u7684\u5305\u88C5</p></blockquote><h2>\u6F14\u793A</h2><blockquote><p>\u4F7F\u7528 <code class="">v-model</code> \u5B9E\u73B0\u6570\u636E\u7684\u53CC\u5411\u7ED1\u5B9A</p></blockquote><pre><code class="language-html">&lt;template&gt;
   &lt;c-input placeholder=&quot;\u8BF7\u8F93\u5165&quot; type=&quot;text&quot; v-model=&quot;value&quot; /&gt;
   &lt;c-input placeholder=&quot;\u8BF7\u8F93\u5165&quot; type=&quot;password&quot; v-model=&quot;value&quot; style=&quot;margin-left:5px&quot; /&gt;
   &lt;div style=&quot;margin-top: 10px&quot;&gt;
@@ -22,8 +22,8 @@ export default {
   &lt;c-input placeholder=&quot;\u8BF7\u8F93\u5165&quot; type=&quot;text&quot; disabled /&gt;
 &lt;/template&gt;
 </code></pre><h2>\u524D\u7F00\u548C\u540E\u7F00\u56FE\u6807</h2><blockquote><p>\u901A\u8FC7\u8BBE\u7F6E <code class="">icon-before</code> \u548C <code class="">icon-after</code> \u8BBE\u7F6E\u524D\u7F00\u53CA\u540E\u7F00\u56FE\u6807</p></blockquote><pre><code class="language-html">&lt;template&gt;
-  &lt;c-input placeholder=&quot;\u8BF7\u8F93\u5165&quot; icon-before=&quot;x-icon-search&quot; /&gt;
-  &lt;c-input placeholder=&quot;\u8BF7\u8F93\u5165&quot; icon-after=&quot;x-icon-calendar&quot; style=&quot;margin-left:5px&quot; /&gt;
+  &lt;c-input placeholder=&quot;\u8BF7\u8F93\u5165&quot; icon-before=&quot;c-icon-search&quot; /&gt;
+  &lt;c-input placeholder=&quot;\u8BF7\u8F93\u5165&quot; icon-after=&quot;c-icon-calendar&quot; style=&quot;margin-left:5px&quot; /&gt;
 &lt;/template&gt;
 </code></pre><h2>\u53EF\u6E05\u7A7A</h2><blockquote><p>\u901A\u8FC7\u8BBE\u7F6E <code class="">clearable</code> \u53EF\u4EE5\u5F00\u542F\u8F93\u5165\u6846\u7684\u6E05\u7A7A</p></blockquote><pre><code class="language-html">&lt;template&gt;
   &lt;c-input placeholder=&quot;\u8BF7\u8F93\u5165&quot; clearable /&gt;

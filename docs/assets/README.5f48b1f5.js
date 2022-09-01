@@ -1,4 +1,4 @@
-import{d as u,c as e,o as n,a as m}from"./index.5f1b703d.js";const l={class:"markdown-container chl-doc"},o=m(`<h1>Menu \u5BFC\u822A\u83DC\u5355</h1><blockquote><p>\u4E3A\u9875\u9762\u548C\u529F\u80FD\u63D0\u4F9B\u5BFC\u822A\u7684\u83DC\u5355\u5217\u8868</p></blockquote><h2>\u6F14\u793A</h2><blockquote><p>\u6C34\u5E73\u7684\u9876\u90E8\u5BFC\u822A\u83DC\u5355</p></blockquote><pre><code class="language-html">&lt;template&gt;
+import{d as u,c as e,o as n,a as m}from"./index.bc64ced0.js";const l={class:"markdown-container chl-doc"},o=m(`<h1>Menu \u5BFC\u822A\u83DC\u5355</h1><blockquote><p>\u4E3A\u9875\u9762\u548C\u529F\u80FD\u63D0\u4F9B\u5BFC\u822A\u7684\u83DC\u5355\u5217\u8868</p></blockquote><h2>\u6F14\u793A</h2><blockquote><p>\u6C34\u5E73\u7684\u9876\u90E8\u5BFC\u822A\u83DC\u5355</p></blockquote><pre><code class="language-html">&lt;template&gt;
   &lt;c-menu mode=&quot;horizontal&quot;&gt;
     &lt;c-menu-item name=&quot;1&quot;&gt;\u5BFC\u822A\u4E00&lt;/c-menu-item&gt;
     &lt;c-sub-menu name=&quot;2&quot;&gt;

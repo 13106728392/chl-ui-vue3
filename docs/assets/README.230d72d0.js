@@ -1,4 +1,4 @@
-import{d as a,c as e,b as c,w as n,a as _,r as i,o as d,e as s}from"./index.5f1b703d.js";const m={class:"markdown-container chl-doc"},u=_(`<h1>Icon \u56FE\u6807</h1><blockquote><p>\u8BED\u4E49\u5316\u7684\u77E2\u91CF\u56FE\u5F62</p></blockquote><h2>\u6F14\u793A</h2><blockquote><p>\u76F4\u63A5\u901A\u8FC7\u8BBE\u7F6E\u7C7B\u540D\u4E3A <code class="">c-icon-iconName</code> \u6765\u4F7F\u7528\u5373\u53EF\u3002\u4F8B\u5982\uFF1A</p></blockquote><pre><code class="language-html">&lt;template&gt;
+import{d as a,c as e,b as c,w as n,a as _,r as i,o as d,e as s}from"./index.bc64ced0.js";const m={class:"markdown-container chl-doc"},u=_(`<h1>Icon \u56FE\u6807</h1><blockquote><p>\u8BED\u4E49\u5316\u7684\u77E2\u91CF\u56FE\u5F62</p></blockquote><h2>\u6F14\u793A</h2><blockquote><p>\u76F4\u63A5\u901A\u8FC7\u8BBE\u7F6E\u7C7B\u540D\u4E3A <code class="">c-icon-iconName</code> \u6765\u4F7F\u7528\u5373\u53EF\u3002\u4F8B\u5982\uFF1A</p></blockquote><pre><code class="language-html">&lt;template&gt;
   &lt;c-icon type=&quot;c-icon-star-on&quot;&gt;&lt;/c-icon&gt;
   &lt;c-icon type=&quot;c-icon-link&quot;&gt;&lt;/c-icon&gt;
 &lt;/template&gt;
