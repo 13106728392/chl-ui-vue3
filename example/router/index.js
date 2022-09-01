@@ -1,6 +1,9 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { data } from './data.json'
 import Home from '../views/Home.vue'
+// vite glob导入解决
+const modules = import.meta.glob('@/components/*/*.md')
+
 
 const routes = [
   {
@@ -22,9 +25,12 @@ data.forEach((item) => {
     meta: {
       title,
     },
-    component: () => import('../../src/components/' + item.componentPath),
+    component:modules['../../src/components/'+ item.componentPath]
   })
 })
+
+// console.log(routes,'ssss',modules)
+
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -35,7 +41,7 @@ const router = createRouter({
 })
 
 router.afterEach((to) => {
-  // const title = to.meta.title ? `${to.meta.title} - RelaxPlus` : `RelaxPlus
+  
   document.title = title
 })
 

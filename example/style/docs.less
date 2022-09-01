@@ -97,14 +97,14 @@
 
       .demo-scroll-item{
         padding: 20px 0;
-        background-color: rgb(var(--success), .6);
+        background-color: var(--success);
         color: #FFFFFF;
         font-size: 18px;
         margin-bottom: 10px;
         text-align: center;
 
         &:nth-of-type(odd){
-          background-color: rgb(var(--success), .9);
+          background-color: var(--success);
         }
       }
     }
@@ -113,20 +113,20 @@
     .demo-carousel{
       height: 250px;
       width: 100%;
-      background-color: rgb(var(--success));
-      color: rgb(var(--white));
+      background-color: var(--success);
+      color: var(--white);
       font-size: 3em;
       text-align: center;
       line-height: 250px;
       
       &:nth-of-type(2n){
-        background-color: rgb(var(--primary));
+        background-color: var(--primary);
       }
       &:nth-of-type(3n){
-        background-color: rgb(var(--danger));
+        background-color: var(--danger);
       }
       &:nth-of-type(4n){
-        background-color: rgb(var(--warning));
+        background-color: var(--warning);
       }
     }
 
@@ -198,22 +198,22 @@
     }
 
     [class*=c-col] {
-      color: rgb(var(--white));
+      color: var(--white);
       padding: 20px 0;
       text-align: center;
       font-size: 16px;
     }
 
     .color1 {
-      background: rgb(var(--color), .9);
+      background: var(--success);
     }
 
     .color2 {
-      background: rgb(var(--color), .7);
+      background: var(--danger);
     }
 
     .color3 {
-      background: rgb(var(--color), .5);
+      background: var(--warning);
     }
   }
 

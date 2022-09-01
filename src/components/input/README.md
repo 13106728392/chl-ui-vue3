@@ -59,8 +59,8 @@ export default {
 
 ```html
 <template>
-  <c-input placeholder="请输入" icon-before="x-icon-search" />
-  <c-input placeholder="请输入" icon-after="x-icon-calendar" style="margin-left:5px" />
+  <c-input placeholder="请输入" icon-before="c-icon-search" />
+  <c-input placeholder="请输入" icon-after="c-icon-calendar" style="margin-left:5px" />
 </template>
 ```
 

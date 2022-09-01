@@ -13,6 +13,8 @@ specifiers:
   markdown-loader: ^8.0.0
   marked: ^4.0.19
   pinia: ^2.0.14
+  rollup-plugin-commonjs: ^10.1.0
+  rollup-plugin-external-globals: ^0.6.1
   typescript: ^4.5.4
   vite: ^2.9.9
   vite-plugin-inspect: ^0.6.0
@@ -33,6 +35,8 @@ dependencies:
   markdown-loader: 8.0.0
   marked: 4.0.19
   pinia: 2.0.20_j6bzmzd4ujpabbp5objtwxyjp4
+  rollup-plugin-commonjs: 10.1.0
+  rollup-plugin-external-globals: 0.6.1
   vite-plugin-inspect: 0.6.0_vite@2.9.15
   vite-plugin-md: 0.20.2_happy-dom@6.0.4+less@4.1.3
   vite-plugin-pages: 0.25.0_vite@2.9.15
@@ -2734,6 +2738,10 @@ packages:
     engines: {node: '>=4.0'}
     dev: false
 
+  /estree-walker/0.6.1:
+    resolution: {integrity: sha512-SqmZANLWS0mnatqbSfRP5g8OXZC12Fgg1IwNtLsyHDzJizORW4khDfjPqJZsemPWBB2uqykUah5YpQ6epsqC/w==}
+    dev: false
+
   /estree-walker/2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
 
@@ -3171,6 +3179,12 @@ packages:
   /is-number/7.0.0:
     resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==}
     engines: {node: '>=0.12.0'}
+    dev: false
+
+  /is-reference/1.2.1:
+    resolution: {integrity: sha512-U82MsXXiFIrjCK4otLT+o2NA2Cd2g5MLoOVXUZjIOhLurrRxpEXzI8O0KZHr3IjLvlAH1kTPYSuqer5T9ZVBKQ==}
+    dependencies:
+      '@types/estree': 0.0.51
     dev: false
 
   /is-regex/1.1.4:
@@ -4001,6 +4015,36 @@ packages:
   /reusify/1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
+    dev: false
+
+  /rollup-plugin-commonjs/10.1.0:
+    resolution: {integrity: sha512-jlXbjZSQg8EIeAAvepNwhJj++qJWNJw1Cl0YnOqKtP5Djx+fFGkp3WRh+W0ASCaFG5w1jhmzDxgu3SJuVxPF4Q==}
+    deprecated: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-commonjs.
+    peerDependencies:
+      rollup: '>=1.12.0'
+    dependencies:
+      estree-walker: 0.6.1
+      is-reference: 1.2.1
+      magic-string: 0.25.9
+      resolve: 1.22.1
+      rollup-pluginutils: 2.8.2
+    dev: false
+
+  /rollup-plugin-external-globals/0.6.1:
+    resolution: {integrity: sha512-mlp3KNa5sE4Sp9UUR2rjBrxjG79OyZAh/QC18RHIjM+iYkbBwNXSo8DHRMZWtzJTrH8GxQ+SJvCTN3i14uMXIA==}
+    peerDependencies:
+      rollup: ^2.25.0
+    dependencies:
+      '@rollup/pluginutils': 4.2.1
+      estree-walker: 2.0.2
+      is-reference: 1.2.1
+      magic-string: 0.25.9
+    dev: false
+
+  /rollup-pluginutils/2.8.2:
+    resolution: {integrity: sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GWrNPHV6ie1LTNJPaLQ==}
+    dependencies:
+      estree-walker: 0.6.1
     dev: false
 
   /rollup/2.77.3:

@@ -1,10 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import {createPinia} from 'pinia'
-import '../src/theme/index.less' 
+import '@/theme/index.less' 
 import './style/docs.less'
 import router from './router'
-import Chl from '../src/components'
+import Chl from '@/components'
 
 // import Chl from '../../dist/chl.es.js'
 

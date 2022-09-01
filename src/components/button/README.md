@@ -77,7 +77,7 @@ tag: General
     plain
     :loading="loading1"
     @click="handerClick1"
-    icon="x-icon-heart-on"
+    icon="c-icon-heart-on"
     >loading</c-button>
   <c-button type="primary" :loading="loading2" @click="handerClick2">Click loading</c-button>
 </template>
@@ -186,12 +186,12 @@ tag: General
 
 ```html
 <template>
-  <c-button icon="x-icon-heart-on" circle></c-button>
-  <c-button type="primary" icon="x-icon-x" circle></c-button>
-  <c-button type="info" icon="x-icon-mic" circle></c-button>
-  <c-button type="danger" icon="x-icon-music" circle></c-button>
-  <c-button type="warning" icon="x-icon-thumbs-down" circle></c-button>
-  <c-button type="success" icon="x-icon-thumbs-up" circle></c-button>
+  <c-button icon="c-icon-heart-on" circle></c-button>
+  <c-button type="primary" icon="c-icon-x" circle></c-button>
+  <c-button type="info" icon="c-icon-mic" circle></c-button>
+  <c-button type="danger" icon="c-icon-music" circle></c-button>
+  <c-button type="warning" icon="c-icon-thumbs-down" circle></c-button>
+  <c-button type="success" icon="c-icon-thumbs-up" circle></c-button>
 </template>
 ```
 
@@ -204,12 +204,12 @@ tag: General
 
 ```html
 <template>
-  <c-button icon="x-icon-home">default</c-button>
-  <c-button type="primary" icon="x-icon-star-on">primary</c-button>
-  <c-button type="success" icon="x-icon-search">success</c-button>
-  <c-button type="info" icon="x-icon-user">info</c-button>
-  <c-button type="danger" icon="x-icon-zap">danger</c-button>
-  <c-button type="warning" icon="x-icon-triangle">warning</c-button>
+  <c-button icon="c-icon-home">default</c-button>
+  <c-button type="primary" icon="c-icon-star-on">primary</c-button>
+  <c-button type="success" icon="c-icon-search">success</c-button>
+  <c-button type="info" icon="c-icon-user">info</c-button>
+  <c-button type="danger" icon="c-icon-zap">danger</c-button>
+  <c-button type="warning" icon="c-icon-triangle">warning</c-button>
 </template>
 ```
 
@@ -222,8 +222,8 @@ tag: General
 
 ```html
 <template>
-  <c-button type="success" icon="x-icon-heart-on" round block>success</c-button>
-  <c-button type="warning" icon="x-icon-star-on" block>warning</c-button>
+  <c-button type="success" icon="c-icon-heart-on" round block>success</c-button>
+  <c-button type="warning" icon="c-icon-star-on" block>warning</c-button>
   <c-button type="primary" plain block>primary</c-button>
 </template>
 ```

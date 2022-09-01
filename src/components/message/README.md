@@ -20,13 +20,16 @@ tag: Feedback
     setup(){
       const instance = getCurrentInstance()
       const {$message} = instance.appContext.config.globalProperties
+      
       const handerClick = () => {
-        $message(
-          {
-            content: '显示信息提示',
-            type: 'info',
-          }
-        )
+        $message({
+          content: "error",
+          type: "error",
+          onClose: () => {
+            console.log(6777);
+          },
+        });
+
       }
       return {
         handerClick
@@ -56,36 +59,45 @@ tag: Feedback
       const instance = getCurrentInstance()
       const {$message} = instance.appContext.config.globalProperties
       const open1 = () => {
-        $message(
-            {
-              content: '显示信息提示',
-              type: 'info',
-            }
-          )
+         $message({
+            content: "info",
+            type: "info",
+            onClose: () => {
+              console.log(6777);
+            },
+          });
+
       }
       const open2 = () => {
-          $message(
-            {
-              content: '显示错误提示',
-              type: 'error',
-            }
-          )
+            $message({
+            content: "danger",
+            type: "danger",
+            onClose: () => {
+              console.log(6777);
+            },
+          });
+
       }
       const open3 = () => {
-          $message(
-            {
-              content: '显示成功提示',
-              type: 'success',
-            }
-          )
+          
+             $message({
+            content: "success",
+            type: "success",
+            onClose: () => {
+              console.log(6777);
+            },
+          });
+
       }
       const open4 = () => {
-          $message(
-            {
-              content: '显示警告提示',
-              type: 'warning',
-            }
-          )
+           $message({
+            content: "warning",
+            type: "warning",
+            onClose: () => {
+              console.log(6777);
+            },
+          });
+
       }
       return {
         open1,
@@ -115,15 +127,15 @@ export default {
     const {$message} = instance.appContext.config.globalProperties
 
     const info = () => {
-      $message(
-        {
-          content: 'message 消息',
-          type: 'info',
+       $message({
+          content: "error",
+          type: "error",
           onClose: () => {
-            console.log(6777)
+            console.log(6777);
           },
-          duration: 3000
-        })
+          duration: 0,
+        });
+
             }
     return {
       info

@@ -80,7 +80,7 @@
     "routePath": "/menu"
   },
   {
-    "done":"flase",
+    "done":"true",
     "title": "Message 消息",
     "tag": "Feedback",
     "componentName": "message",
@@ -88,7 +88,7 @@
     "routePath": "/message"
   },
   {
-    "done":"flase",
+    "done":"true",
     "title": "Modal 对话框",
     "tag": "Feedback",
     "componentName": "modal",

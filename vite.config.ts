@@ -2,6 +2,11 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 
+// import myPlugin from './config/zip'  // 打包自动生成dist.zip压缩包
+
+import commonjs from 'rollup-plugin-commonjs';
+import externalGlobals from 'rollup-plugin-external-globals';
+
 // 引入md作为页面的配置
 import markdown from 'vite-plugin-md';
 import Inspect from 'vite-plugin-inspect';
@@ -15,11 +20,13 @@ const mdConfig = require('./md.config');
 
 
 export default defineConfig({
-  base:'/chl-ui-vue3/',
+  base: '/chl-ui-vue3/',
+  // base: './',
   plugins: [
     vue({
-      include: [/\.vue$/, /\.md$/], 
+      include: [/\.vue$/, /\.md$/],
     }),
+    // myPlugin()
     markdown({
       markdownItOptions: {
         html: true,
@@ -53,13 +60,24 @@ export default defineConfig({
     }),
     Inspect(),
   ],
-  // base:  'chl-ui-vue3/',
+  
   build: {
-    rollupOptions: {
-      input: {
-      main: resolve(__dirname, 'index.html'),
-      // nested: resolve(__dirname, 'nested/index.html')
-      },
+
+    // rollupOptions: {
+    //   plugins: [
+    //     commonjs(),
+    //     externalGlobals({
+    //       vue: 'Vue',
+    //       'vue-router': 'VueRouter',
+    //     }),
+    //   ],
+    //   output: {
+    //     format: 'es',
+    //     globals: {
+    //       vue: 'Vue',
+    //       'vue-router': 'VueRouter',
+    //     },
+    //   },
       // 告诉打包工具这是是外部依赖项 
       // external: ['vue'],
       // output: {
@@ -67,7 +85,9 @@ export default defineConfig({
       //     vue: 'Vue'
       //   }
       // }
-    },
+    // },
+
+
     // 构建库模式打包
     // lib: {
     //   // 构建入口
@@ -78,8 +98,10 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "chl-ui-vue3": resolve(__dirname, 'chl-ui-vue3'),
+
       "@": resolve(__dirname, "src"),
+      // "chl-ui-vue3": resolve(__dirname, 'chl-ui-vue3'),
+      '@Components': resolve(__dirname, "./src/components"),
     },
     // 导入时想要省略的扩展名列表
     extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"],

@@ -58,10 +58,10 @@ export default {
 
   <c-switch v-model="state3">
     <template #open>
-      <x-icon type="x-icon-check"/>
+      <c-icon type="c-icon-check"/>
     </template>
     <template #close>
-      <x-icon type="x-icon-x" />
+      <c-icon type="c-icon-x" />
     </template>
   </c-switch>
 </template>
@@ -127,7 +127,7 @@ export default {
 ```html
 <template>
   <c-switch v-model="state" :disabled="disabled"></c-switch>
-  <x-button @click="disabled = !disabled">{{ disabled ? '激活' : '禁止' }}</x-button>
+  <c-button @click="disabled = !disabled">{{ disabled ? '激活' : '禁止' }}</x-button>
 </template>
 
 <script>

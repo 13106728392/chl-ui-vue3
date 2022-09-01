@@ -4,6 +4,8 @@
 ## 介绍
 `chl-ui-vue3`是vue3组件库,适合用于vue3组件学习。
 
+文档地址：https://13106728392.github.io/chl-ui-vue3/#/
+
 
 ## 安装
 ```

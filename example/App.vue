@@ -2,13 +2,22 @@
   <div class="wrapper">
     <div class="sidebar-nav">
       <div class="sidebar-menu">
+        <dl>
+          <dd class="navItem">
+            <router-link to="/" active-class="active-class">
+              介绍</router-link>
+          </dd>
+        </dl>
+
         <div v-for="(menu, i) in nav" class="menu" :key="i">
           <dl v-if="menu.child">
             <dt># {{ menu.title }}</dt>
             <dd class="navItem" v-for="(submenu, k) in menu.child" :key="i + k">
-              <router-link :to="submenu.done=='true' ? submenu.routePath : '' " :class="submenu.done=='true' ? 'isclick' : 'noclick' ">{{
-                  submenu.title
-              }}</router-link>
+              <router-link :to="submenu.done == 'true' ? submenu.routePath : ''"
+                :class="submenu.done == 'true' ? 'isclick' : 'noclick'"
+                :active-class="submenu.done == 'true' ? 'active-class' : ''">{{
+                    submenu.title
+                }}</router-link>
             </dd>
           </dl>
           <router-link v-else :to="menu.routePath">{{
@@ -74,14 +83,12 @@ const useNav = () => {
 .sidebar-nav {
   overflow: auto;
   width: 200px;
-  padding:0 10px;
+  padding: 0 10px;
   box-sizing: border-box;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0px;
-
-
   transition: background-color .3s ease;
 
   dt {
@@ -89,31 +96,39 @@ const useNav = () => {
     padding: 8px 10px;
     padding-bottom: 8px;
     border-bottom: 1px solid #98a6ad;
+    
   }
-   dd {
-     width: 100%;
-     margin: 0;
-     .isclick{}
-     .noclick{
-      text-decoration:line-through
-     }
-      a {
-        font-size: 14px;
-        display: block;
-        box-sizing: border-box;
-        width: 100%;
-        text-decoration: none;
-        color: #000;
-        padding: 8px 10px;
-        text-align: left;
-        margin: 4px 0;
-      }
-      transition: background-color .3s ease;
-      &:hover {
-        background-color: rgb(#000 0.1);
-      }
+
+  dd {
+    width: 100%;
+    margin: 0;
+    border-radius: 6px;
+    .noclick {
+      text-decoration: line-through
     }
 
+    a {
+      font-size: 14px;
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      text-decoration: none;
+      color: #000;
+      padding: 8px 10px;
+      text-align: left;
+      margin: 4px 0;
+    }
+    transition: background-color .3s ease;
+    &:hover {
+      background-color: rgb(#000 0.1);
+    }
+  }
+
+}
+
+
+.active-class {
+  background-color: rgb(#000 0.1);
 }
 
 .content-page {
@@ -122,11 +137,14 @@ const useNav = () => {
   height: 100%;
   overflow: auto;
   background-color: #f4f5f5;
-      padding: 35px;
-    padding-right: 160px;
+  padding: 35px;
+  padding-right: 160px;
   right: 0;
   left: 200px;
   top: 0;
   bottom: 0;
+}
+.color1{
+  background-color:red;
 }
 </style>

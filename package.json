@@ -9,13 +9,20 @@
   "files": [
     "dist"
   ],
-  "main": "./dist",
-  
+  "main": "./dist/chl.umd.js",
+  "module": "./dist/chl.es.js",
+  "exports": {
+    "./dist/style.css": "./dist/style.css",
+    ".": {
+      "import": "./dist/chl.es.js",
+      "require": "./dist/chl.umd.js"
+    }
+  },
   "license": "ISC",
   "scripts": {
     "dev": "vite --host --open",
-    "build-lib": "vite build ",
-    "build-page": "vite build",
+    "lib": "vite build ",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
