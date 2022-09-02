@@ -62,6 +62,7 @@ export default defineConfig({
   ],
   
   build: {
+    outDir: process.env.OUTDIR, // 构建得包名  默认：dist
 
     // rollupOptions: {
     //   plugins: [
