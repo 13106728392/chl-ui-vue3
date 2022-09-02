@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 
@@ -19,92 +19,88 @@ const mdConfig = require('./md.config');
 // import hljs from 'highlight.js';
 
 
-export default defineConfig({
-  base: '/chl-ui-vue3/',
-  // base: './',
-  plugins: [
-    vue({
-      include: [/\.vue$/, /\.md$/],
-    }),
-    // myPlugin()
-    markdown({
-      markdownItOptions: {
-        html: true,
-        linkify: true,
-        typographer: true,
-        xhtmlOut: true,
-        // 高亮配置
-        // highlight: (str: any, lang: any) => {
-        //   if (lang && hljs.getLanguage(lang)) {
-        //     try {
-        //       return '<pre class="hljs"><code>' +
-        //         hljs.highlight(lang, str, true).value +
-        //         '</code></pre>';
-        //     } catch (__) {
-        //     }
-        //   }
-        //   return '<pre class="hljs"><code>' + markdownRenderer.utils.escapeHtml(str) + '</code></pre>';
-        // }
-      },
-      markdownItSetup(md) {
-        mdConfig(md);
-        // md.use(require('markdown-it-anchor'))
-        // md.use(require('markdown-it-prism'))
-      },
-      // 添加md文件默认样式
-      wrapperClasses: 'markdown-container chl-doc',
-    }),
-    Pages({
-      pagesDir: 'pages',
-      extensions: ['vue', 'md'],
-    }),
-    Inspect(),
-  ],
-  
-  build: {
-    outDir: process.env.OUTDIR, // 构建得包名  默认：dist
+export default ({ mode }) => {
+  const env = loadEnv(mode,process.cwd()) // 环境变量对象
+  return defineConfig({
+    base: env.VITE_APP_URL,  // 路径前缀
+    plugins: [
+      vue({
+        include: [/\.vue$/, /\.md$/],
+      }),
+      // myPlugin()
+      markdown({
+        markdownItOptions: {
+          html: true,
+          linkify: true,
+          typographer: true,
+          xhtmlOut: true,
+          // 高亮配置
+          // highlight: (str: any, lang: any) => {
+          //   if (lang && hljs.getLanguage(lang)) {
+          //     try {
+          //       return '<pre class="hljs"><code>' +
+          //         hljs.highlight(lang, str, true).value +
+          //         '</code></pre>';
+          //     } catch (__) {
+          //     }
+          //   }
+          //   return '<pre class="hljs"><code>' + markdownRenderer.utils.escapeHtml(str) + '</code></pre>';
+          // }
+        },
+        markdownItSetup(md) {
+          mdConfig(md);
+          // md.use(require('markdown-it-anchor'))
+          // md.use(require('markdown-it-prism'))
+        },
+        // 添加md文件默认样式
+        wrapperClasses: 'markdown-container chl-doc',
+      }),
+      Pages({
+        pagesDir: 'pages',
+        extensions: ['vue', 'md'],
+      }),
+      Inspect(),
+    ],
 
-    // rollupOptions: {
-    //   plugins: [
-    //     commonjs(),
-    //     externalGlobals({
-    //       vue: 'Vue',
-    //       'vue-router': 'VueRouter',
-    //     }),
-    //   ],
-    //   output: {
-    //     format: 'es',
-    //     globals: {
-    //       vue: 'Vue',
-    //       'vue-router': 'VueRouter',
-    //     },
-    //   },
-      // 告诉打包工具这是是外部依赖项 
-      // external: ['vue'],
-      // output: {
-      //   globals: {
-      //     vue: 'Vue'
-      //   }
-      // }
-    // },
+    build: {
+      outDir: env.VITE_APP_OUTDIR,// 构建得包名  默认：dist
 
+      // sourcemap: false, // 输出.map文件
+      // rollupOptions:  {
+      // 确保外部化处理那些你不想打包进库的依赖
+      //   plugins: [
+      //     commonjs(),
+      //     externalGlobals({
+      //       vue: 'Vue',
+      //       'vue-router': 'VueRouter',
+      //     }),
+      //   ],
+      //   output: {
+      // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
+      //     format: 'es',
+      //     globals: {
+      //       vue: 'Vue',
+      //       'vue-router': 'VueRouter',
+      //     },
+      //   },
+      //   external: ['vue']
+      // } ,
 
-    // 构建库模式打包
-    // lib: {
-    //   // 构建入口
-    //   entry: resolve(__dirname, 'src/components/index.ts'),
-    //   name: 'ChlUi',
-    //   fileName: (format) => `chl.${format}.js`
-    // },
-  },
-  resolve: {
-    alias: {
-
-      "@": resolve(__dirname, "src"),
-      // "chl-ui-vue3": resolve(__dirname, 'chl-ui-vue3'),
-      '@Components': resolve(__dirname, "./src/components"),
+      // 构建库模式打包
+      lib:env.VITE_APP_TYPE == 'lib' ? {
+        // 构建入口
+        entry: resolve(__dirname, 'src/components/index.ts'),
+        name: 'ChlUi',
+        fileName: (format) => `chl.${format}.js`
+      } :null
     },
-    // 导入时想要省略的扩展名列表
-    extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"],
-  },
-})
+    resolve: {
+      alias: {
+        "@": resolve(__dirname, "src"),
+        '@Components': resolve(__dirname, "./src/components"),
+      },
+      // 导入时想要省略的扩展名列表
+      extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"],
+    },
+  })
+}
