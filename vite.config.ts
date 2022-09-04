@@ -1,5 +1,6 @@
 import { defineConfig, loadEnv } from 'vite'
-import { resolve } from 'path'
+import path from 'path'
+import fs from 'fs-extra'
 import vue from '@vitejs/plugin-vue'
 
 // import myPlugin from './config/zip'  // 打包自动生成dist.zip压缩包
@@ -14,13 +15,14 @@ import Pages from 'vite-plugin-pages'
 const markdownRenderer = require('markdown-it')();
 // import markdownPrism from 'markdown-it-prism'
 // 引入markdwon代码块处理
-const mdConfig = require('./md.config');
+const mdConfig = require('./config/mdconfig.ts');
 // markdown文件高亮样式
-// import hljs from 'highlight.js';
+import hljs from 'highlight.js';
 
+console.log(path,'222333')
 
 export default ({ mode }) => {
-  const env = loadEnv(mode,process.cwd()) // 环境变量对象
+  const env = loadEnv(mode,process.cwd()) // 开发或生产环境服务的公共基础路径：默认'/'
   return defineConfig({
     base: env.VITE_APP_URL,  // 路径前缀
     plugins: [
@@ -35,20 +37,23 @@ export default ({ mode }) => {
           typographer: true,
           xhtmlOut: true,
           // 高亮配置
-          // highlight: (str: any, lang: any) => {
-          //   if (lang && hljs.getLanguage(lang)) {
-          //     try {
-          //       return '<pre class="hljs"><code>' +
-          //         hljs.highlight(lang, str, true).value +
-          //         '</code></pre>';
-          //     } catch (__) {
-          //     }
-          //   }
-          //   return '<pre class="hljs"><code>' + markdownRenderer.utils.escapeHtml(str) + '</code></pre>';
-          // }
+          highlight: (str: any, lang: any) => {
+            if (lang && hljs.getLanguage(lang)) {
+              try {
+                return '<pre class="hljs"><code>' +
+                  hljs.highlight(lang, str, true).value +
+                  '</code></pre>';
+              } catch (__) {
+              }
+            }
+            return '<pre class="hljs"><code>' + markdownRenderer.utils.escapeHtml(str) + '</code></pre>';
+          }
         },
-        markdownItSetup(md) {
-          mdConfig(md);
+        async  markdownItSetup(md) {
+          const code = await fs.readFile(path, 'utf-8')
+          console.log(code,'4444')
+          mdConfig(md,code);
+          //  解决path报错问题
           // md.use(require('markdown-it-anchor'))
           // md.use(require('markdown-it-prism'))
         },
@@ -89,15 +94,15 @@ export default ({ mode }) => {
       // 构建库模式打包
       lib:env.VITE_APP_TYPE == 'lib' ? {
         // 构建入口
-        entry: resolve(__dirname, 'src/components/index.ts'),
+        entry: path.resolve(__dirname, 'src/components/index.ts'),
         name: 'ChlUi',
         fileName: (format) => `chl.${format}.js`
       } :null
     },
     resolve: {
       alias: {
-        "@": resolve(__dirname, "src"),
-        '@Components': resolve(__dirname, "./src/components"),
+        "@": path.resolve(__dirname, "src"),
+        '@Components': path.resolve(__dirname, "./src/components"),
       },
       // 导入时想要省略的扩展名列表
       extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"],

@@ -3,6 +3,8 @@ import App from './App.vue'
 import {createPinia} from 'pinia'
 import '@/theme/index.less' 
 import './style/docs.less'
+import './style/hljs.less' // 代码高亮代码
+
 import router from './router'
 import Chl from '@/components'
 

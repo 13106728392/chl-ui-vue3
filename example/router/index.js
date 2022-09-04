@@ -25,11 +25,11 @@ data.forEach((item) => {
     meta: {
       title,
     },
-    component:modules['../../src/components/'+ item.componentPath]
+    component:modules['/src/components/'+ item.componentPath]
   })
 })
 
-// console.log(routes,'ssss',modules)
+console.log(routes,'ssss',modules)
 
 
 const router = createRouter({
