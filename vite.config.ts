@@ -1,5 +1,5 @@
 import { defineConfig, loadEnv } from 'vite'
-import path from 'path'
+import {resolve} from 'path'
 import fs from 'fs-extra'
 import vue from '@vitejs/plugin-vue'
 
@@ -19,7 +19,7 @@ const mdConfig = require('./config/mdconfig.ts');
 // markdown文件高亮样式
 import hljs from 'highlight.js';
 
-console.log(path,'222333')
+// console.log(path,'222333')
 
 export default ({ mode }) => {
   const env = loadEnv(mode,process.cwd()) // 开发或生产环境服务的公共基础路径：默认'/'
@@ -49,10 +49,10 @@ export default ({ mode }) => {
             return '<pre class="hljs"><code>' + markdownRenderer.utils.escapeHtml(str) + '</code></pre>';
           }
         },
-        async  markdownItSetup(md) {
-          const code = await fs.readFile(path, 'utf-8')
-          console.log(code,'4444')
-          mdConfig(md,code);
+          markdownItSetup(md) {
+          // const code = await fs.readFile(path, 'utf-8')
+          // console.log(code,'4444')
+          mdConfig(md);
           //  解决path报错问题
           // md.use(require('markdown-it-anchor'))
           // md.use(require('markdown-it-prism'))
@@ -94,15 +94,15 @@ export default ({ mode }) => {
       // 构建库模式打包
       lib:env.VITE_APP_TYPE == 'lib' ? {
         // 构建入口
-        entry: path.resolve(__dirname, 'src/components/index.ts'),
+        entry: resolve(__dirname, 'src/components/index.ts'),
         name: 'ChlUi',
         fileName: (format) => `chl.${format}.js`
       } :null
     },
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, "src"),
-        '@Components': path.resolve(__dirname, "./src/components"),
+        "@": resolve(__dirname, "src"),
+        '@Components': resolve(__dirname, "./src/components"),
       },
       // 导入时想要省略的扩展名列表
       extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"],

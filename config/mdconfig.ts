@@ -1,33 +1,32 @@
-const container = require("markdown-it-container");
-// const markdownRenderer = require('markdown-it')();
-// const matter = require('gray-matter');
-// const md = require('./config')
-const marked = require('marked')
+
+const md = require('markdown-it')();
+const fs = require('fs');
+const path = require('path');
+const mdContainer = require('markdown-it-container');
+
  
+module.exports = md => {
+  md.use(mdContainer, 'demo', {
+    validate(params) {
+      return params.trim().match(/^demo\s*(.*)$/);
+    },
+    render(tokens, idx) {
+      const m = tokens[idx].info.trim().match(/^demo\s*(.*)$/);
+      if (tokens[idx].nesting === 1) {
+        const description = m && m.length > 1 ? m[1] : '';
+        const content = tokens[idx + 1].type === 'fence' ? tokens[idx + 1].content : '';
+        return `<demo-block>
+        ${description ? `<div>${md.render(description)}</div>` : ''}
+        <!--element-demo: ${content}:element-demo-->
+        `;
+      }
+      return '</demo-block>';
+    }
+  });
 
-function mdLoader (source: any,code:'') {
-    // console.log(md.render(matter(md).content))
-    // const content = marked.lexer(source)
-    console.log(code,'2222')
-    const tokens = marked.lexer(code)
 
-    console.log(tokens,)
-    debugger
-  return  source.use(container, 'demo', {
-        render: (tokens: any, index: any) => {
-            if (tokens[index].nesting === 1) {
-                let content = tokens[index + 1].content;
-                return `<demo>
-                            <template v-slot:view>${content}</template>
-                            <template class="highlight" v-slot:highlight >   
-                                    `
-            } else {
-                return `</template></demo>`
-            }
-        }
-    })
+  
+  md.use(mdContainer, 'tip');
+  md.use(mdContainer, 'warning');
 };
 
-
-
-module.exports = mdLoader

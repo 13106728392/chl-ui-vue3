@@ -12,7 +12,7 @@ tag: General
 > 按钮可以根据 `type` 来设置不同的颜色，提供了 6 种类型的按钮 `primary` `success` `info` `danger` `warning`
 
 
-
+:::demo 
 ```html
 <template>
   <c-button type="default"> default </c-button>
@@ -23,6 +23,7 @@ tag: General
   <c-button type="danger"> danger </c-button>
 </template>
 ```
+:::
 
 
 ## 镂空按钮

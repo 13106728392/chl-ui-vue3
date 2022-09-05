@@ -1,25 +1,80 @@
-const mdContainer = require('markdown-it-container')
+const { stripScript, stripTemplate, genInlineComponentText } = require('./util')
+const md = require('./config')
+const matter = require('gray-matter');
 
-module.exports = (md) => {
-  md.use(mdContainer, 'demo', {
-    validate(params) {
-      return params.trim().match(/^demo\s*(.*)$/)
-    },
-    render(tokens, idx) {
-      const m = tokens[idx].info.trim().match(/^demo\s*(.*)$/)
-      if (tokens[idx].nesting === 1) {
-        const description = m && m.length > 1 ? m[1] : ''
-        const content =
-          tokens[idx + 1].type === 'fence' ? tokens[idx + 1].content : ''
-        return `<demo-block>
-        ${description ? `${md.render(description)}` : ''}
-        <!--element-demo: ${content}:element-demo-->
-        `
+
+// const fs = require('fs')
+// const path = require('path')
+// var source = fs.readFileSync(path.resolve(__dirname, '../../docs/Switch.md'), 'utf8')
+// setTimeout(mdLoader, 0, source)
+
+
+function mdLoader (source) {
+  const content = md.render(matter(source).content)
+
+  const startTag = '<!--element-demo:'
+  const startTagLen = startTag.length
+  const endTag = ':element-demo-->'
+  const endTagLen = endTag.length
+
+  let componenetsString = ''
+  let id = 0 // demo 的 id
+  const output = [] // 输出的内容
+  let start = 0 // 字符串开始位置
+
+  let commentStart = content.indexOf(startTag)
+  let commentEnd = content.indexOf(endTag, commentStart + startTagLen)
+  while (commentStart !== -1 && commentEnd !== -1) {
+    output.push(content.slice(start, commentStart))
+
+    const commentContent = content.slice(commentStart + startTagLen, commentEnd)
+    const html = stripTemplate(commentContent)
+    const script = stripScript(commentContent)
+
+    const demoComponentContent = genInlineComponentText(html, script)
+
+    const demoComponentName = `element-demo${id}`
+    output.push(`<template #source><${demoComponentName} /></template>`)
+    componenetsString += `${JSON.stringify(
+      demoComponentName
+    )}: ${demoComponentContent},`
+
+    // 重新计算下一次的位置
+    id++
+    start = commentEnd + endTagLen
+    commentStart = content.indexOf(startTag, start)
+    commentEnd = content.indexOf(endTag, commentStart + startTagLen)
+  }
+
+  // 仅允许在 demo 不存在时，才可以在 Markdown 中写 script 标签
+  // todo: 优化这段逻辑
+  let pageScript = ''
+  if (componenetsString) {
+    pageScript = `<script>
+      import hljs from 'highlight.js'
+      import * as Vue from "vue"
+      export default {
+        name: 'component-doc',
+        components: {
+          ${componenetsString}
+        }
       }
-      return '</demo-block>'
-    }
-  })
+    </script>`
+  } else if (content.indexOf('<script>') === 0) {
+    // 硬编码，有待改善
+    start = content.indexOf('</script>') + '</script>'.length
+    pageScript = content.slice(0, start)
+  }
 
-  md.use(mdContainer, 'tip')
-  md.use(mdContainer, 'warning')
+  output.push(content.slice(start))
+  return `
+    <template>
+      <section class="relax-doc">
+        ${output.join('')}
+      </section>
+    </template>
+    ${pageScript}
+  `
 }
+
+module.exports = mdLoader
