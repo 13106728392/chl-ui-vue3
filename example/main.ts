@@ -4,7 +4,7 @@ import {createPinia} from 'pinia'
 import '@/theme/index.less' 
 import './style/docs.less'
 import './style/hljs.less' // 代码高亮代码
-import demoBlock from './views/demoBlock.vue'
+import demoBlock from '../config/demoBlock.vue'
 
 import router from './router'
 import Chl from '@/components'
@@ -19,6 +19,6 @@ const app = createApp(App)
     app.
     use(createPinia())
     .use(Chl)
-    .component('demo-block', demoBlock)
     .use(router)
+    .component('demo-block', demoBlock)
     .mount('#app') // 使用

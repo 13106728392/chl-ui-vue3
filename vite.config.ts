@@ -1,5 +1,6 @@
 import { defineConfig, loadEnv } from 'vite'
-import {resolve} from 'path'
+import  {resolve} from 'path'
+// import path from 'path'
 import fs from 'fs-extra'
 import vue from '@vitejs/plugin-vue'
 
@@ -16,9 +17,8 @@ const markdownRenderer = require('markdown-it')();
 // import markdownPrism from 'markdown-it-prism'
 // 引入markdwon代码块处理
 const mdConfig = require('./config/mdconfig.ts');
-// markdown文件高亮样式
+// markdown文件高亮样式   
 import hljs from 'highlight.js';
-
 // console.log(path,'222333')
 
 export default ({ mode }) => {
@@ -49,10 +49,10 @@ export default ({ mode }) => {
             return '<pre class="hljs"><code>' + markdownRenderer.utils.escapeHtml(str) + '</code></pre>';
           }
         },
-          markdownItSetup(md) {
+        async  markdownItSetup(md) {
           // const code = await fs.readFile(path, 'utf-8')
           // console.log(code,'4444')
-          mdConfig(md);
+          mdConfig(md,'sss');
           //  解决path报错问题
           // md.use(require('markdown-it-anchor'))
           // md.use(require('markdown-it-prism'))

@@ -31,7 +31,7 @@ tag: General
 > 设置 `plain` 属性可以设置镂空按钮
 
 
-
+:::demo 
 ```html
 <template>
   <c-button type="default" plain> default </c-button>
@@ -42,7 +42,7 @@ tag: General
   <c-button type="danger" plain> danger </c-button>
 </template>
 ```
-
+:::
 
 ## 圆角按钮
 

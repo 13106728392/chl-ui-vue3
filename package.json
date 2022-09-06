@@ -29,7 +29,7 @@
     "@vue/cli-plugin-babel": "^5.0.8",
     "fs-extra": "^10.1.0",
     "happy-dom": "^6.0.4",
-    "highlight": "^0.2.4",
+    "highlight.js": "^11.6.0",
     "html-loader": "^4.1.0",
     "less": "^4.1.3",
     "less-loader": "^11.0.0",
