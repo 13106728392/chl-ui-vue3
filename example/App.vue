@@ -33,15 +33,53 @@
 <script>
 import routes from './router/data'
 import showView from './views/View'
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeMount, nextTick ,reactive} from 'vue'
 import pkg from '../package.json'
-
+import emitter from "./utils/bus";
 export default {
   components: {
     showView,
   },
+
   setup() {
+    const state = reactive({
+      contentList: [],
+      topList: []
+    })
+
+    const mainScroll = ref(null)
+
+// state.contentList = menuList[0]['list'][0]?.content;
     const nav = useNav()
+
+    const calcH2TopList = () => {
+      let h2List = document.querySelectorAll('h2');
+      let arr = [];
+      h2List.forEach(item => {
+        arr.push(item.offsetTop);
+      })
+      state.topList = arr;
+    }
+
+
+    onMounted(() => {
+      nextTick(() => {
+        calcH2TopList();
+        // mainScroll.value.addEventListener("scroll", thorrle(handleScroll, 200));
+      })
+      emitter.on('previewChange', (res) => {
+        setTimeout(() => {
+          calcH2TopList();
+        }, 500);
+      })
+    })
+
+    onBeforeMount(() => {
+      emitter.off('previewChange');
+    });
+
+
+
     return {
       nav,
       version: pkg.version,
@@ -96,13 +134,14 @@ const useNav = () => {
     padding: 8px 10px;
     padding-bottom: 8px;
     border-bottom: 1px solid #98a6ad;
-    
+
   }
 
   dd {
     width: 100%;
     margin: 0;
     border-radius: 6px;
+
     .noclick {
       text-decoration: line-through
     }
@@ -118,7 +157,9 @@ const useNav = () => {
       text-align: left;
       margin: 4px 0;
     }
+
     transition: background-color .3s ease;
+
     &:hover {
       background-color: rgb(#000 0.1);
     }
@@ -144,7 +185,8 @@ const useNav = () => {
   top: 0;
   bottom: 0;
 }
-.color1{
-  background-color:red;
+
+.color1 {
+  background-color: red;
 }
 </style>

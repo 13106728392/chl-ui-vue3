@@ -19,6 +19,8 @@ data.forEach((item) => {
     .reverse()
     .join(' ')
 
+
+    // console.log(modules['/src/components/'+ item.componentPath],'路由地址')
   routes.push({
     path: item.routePath,
     name: item.componentName,
@@ -29,7 +31,7 @@ data.forEach((item) => {
   })
 })
 
-console.log(routes,'ssss',modules)
+// console.log(routes,'ssss',modules)
 
 
 const router = createRouter({
