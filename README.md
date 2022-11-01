@@ -8,15 +8,15 @@
 
 
 ## 安装
-```
+
 npm install chl-ui-vue3
 // or
 yarn add chl-ui-vue3
-```
+
 
 
 ## 快速上手
-```js
+js
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
@@ -29,17 +29,17 @@ createApp(App)
 .use(router)
 .use(Chlui) // 注册到Vue中
 .mount('#app')
-```
+
 ## 注意
-```
+
 尽量使用vue3架构项目运行
-```
+
 
 
 ## 开发
 下载项目进行依赖安装 `npm install` or `yarn`
 
-```
+
 # 运行
 yarn serve
 
@@ -48,10 +48,10 @@ yarn build
 
 # 打包组件
 yarn lib
-```
+
 
 ## 辅助工具的变动
-```
+
 ## 浏览器支持
 仅支持现代浏览器
 

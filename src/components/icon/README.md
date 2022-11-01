@@ -1,3 +1,8 @@
+<script setup>
+import demo1 from './doc/demo1.vue';
+import demoblock from '@example/views/demoblock.vue';
+</script>
+
 ---
 title: Icon 图标
 tag: General
@@ -9,15 +14,13 @@ tag: General
 
 ## 演示
 
-> 直接通过设置类名为 `c-icon-iconName` 来使用即可。例如：
+> 直接通过设置类名为 `c-icon-iconName` 来使用即可。
 
+例如：
 
-```html
-<template>
-  <c-icon type="c-icon-star-on"></c-icon>
-  <c-icon type="c-icon-link"></c-icon>
-</template>
-```
+  <demo1/>
+
+<demoblock compname="icon" demoname="demo1" />
 
 
 ## 图标集合

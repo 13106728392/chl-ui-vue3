@@ -92,7 +92,7 @@ export default {
 &lt;/script&gt;
 </code></pre><h2>\u4E0D\u53EF\u70B9\u51FB</h2><blockquote><p>\u7981\u6B62\u70B9\u51FB\u72B6\u6001</p></blockquote><pre><code class="language-html">&lt;template&gt;
   &lt;c-switch v-model=&quot;state&quot; :disabled=&quot;disabled&quot;&gt;&lt;/c-switch&gt;
-  &lt;c-button @click=&quot;disabled = !disabled&quot;&gt;{{ disabled ? &#39;\u6FC0\u6D3B&#39; : &#39;\u7981\u6B62&#39; }}&lt;/x-button&gt;
+  &lt;c-button @click=&quot;disabled = !disabled&quot;&gt;{{ disabled ? &#39;\u6FC0\u6D3B&#39; : &#39;\u7981\u6B62&#39; }}&lt;/c-button&gt;
 &lt;/template&gt;
 
 &lt;script&gt;

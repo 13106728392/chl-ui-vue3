@@ -121,7 +121,7 @@
     "routePath": "/row"
   },
   {
-    "done":"flase",
+    "done":"true",
     "title": "Scroll 滚动",
     "tag": "Others",
     "componentName": "scroll",

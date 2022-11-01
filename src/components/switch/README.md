@@ -1,147 +1,85 @@
----
-title: Switch 开关
-tag: Data Entry
----
+<script setup>
+import demo1 from './doc/demo1.vue';
+import demo2 from './doc/demo2.vue';
+import demo3 from './doc/demo3.vue';
+import demo4 from './doc/demo4.vue';
+import demoblock from '@example/views/demoblock.vue';
+</script>
+
 
 # Switch 开关
-> 开关选择器
+### 开关选择器
 
 ## 演示
-> 切换状态时，触发事件
+### 切换状态时，触发事件
  当状态改变时，会触发 `change` 事件
-```html
-<template>
-   <c-switch v-model="state1"></c-switch>
-   <c-switch v-model="state2" @change="change"></c-switch> 
-</template>
 
-<script>
-import {ref, getCurrentInstance} from 'vue'
-export default {
-  setup(){
-    const instance = getCurrentInstance()
-    const {$message} = instance.appContext.config.globalProperties
+ 
+<br/>
+<div class="source">
+  <demo1/>
+</div>
+<demoblock compname="switch" demoname="demo1" />
 
-    const state1 = ref(true)
-    const state2 = ref(false)
 
-    const change = (status) => {
-      $message.success('switch2状态：' + status)
-    }
-
-    return {
-      state1,
-      state2,
-      change
-    }
-  }
-}
-</script>
-```
 
 
 
 ## 文字和图标
-> 自定义内容, 建议文字长度保持统一
+### 自定义内容, 建议文字长度保持统一
  使用 `open` 和 `close` 插槽
-```html
-<template>
-  <c-switch v-model="state1">
-    <template #open>开</template>
-    <template #close>关</template>
-  </c-switch>
 
-  <c-switch v-model="state2">
-    <template #open>打开</template>
-    <template #close>关闭</template>
-  </c-switch>
-
-  <c-switch v-model="state3">
-    <template #open>
-      <c-icon type="c-icon-check"/>
-    </template>
-    <template #close>
-      <c-icon type="c-icon-x" />
-    </template>
-  </c-switch>
-</template>
-
-<script>
-import {ref} from 'vue'
-export default {
-  setup(){
-    const state1 = ref(false)
-    const state2 = ref(true)
-    const state3 = ref(true)
-
-    return {
-      state1,
-      state2,
-      state3
-    }
-  }
-}
-</script>
-```
+<br/>
+<div class="source">
+  <demo2/>
+</div>
+<demoblock compname="switch" demoname="demo2" />
 
 
 ## 不同色系
-> 提供了 `primary` `info` `danger` `success` `warning` 五种颜色， 默认`primary`
+### 提供了 `primary` `info` `danger` `success` `warning` 五种颜色， 默认`primary`
 
-```html
-<template>
-  <c-switch v-model="state1" type="primary"></c-switch>
-  <c-switch v-model="state2" type="info"></c-switch>
-  <c-switch v-model="state3" type="danger"></c-switch>
-  <c-switch v-model="state4" type="success"></c-switch>
-  <c-switch v-model="state5" type="warning"></c-switch>
-</template>
 
-<script>
-import {ref} from 'vue'
-export default {
-  setup(){
-    const state1 = ref(true)
-    const state2 = ref(true)
-    const state3 = ref(true)
-    const state4 = ref(true)
-    const state5 = ref(true)
+<br/>
+<div class="source">
+  <demo3/>
+</div>
+<demoblock compname="switch" demoname="demo3" />
 
-    return {
-      state1,
-      state2,
-      state3,
-      state4,
-      state5,
-    }
-  }
-}
-</script>
-```
+
 
 
 
 ## 不可点击
-> 禁止点击状态
+### 禁止点击状态
 
-```html
-<template>
-  <c-switch v-model="state" :disabled="disabled"></c-switch>
-  <c-button @click="disabled = !disabled">{{ disabled ? '激活' : '禁止' }}</x-button>
-</template>
 
-<script>
-import {ref} from 'vue'
-export default {
-  setup(){
-    const state = ref(true)
-    const disabled = ref(true)
 
-    return {
-      state,
-      disabled
-    }
-  }
-}
-</script>
-```
+<br/>
+<div class="source">
+  <demo4/>
+</div>
+<demoblock compname="switch" demoname="demo4" />
+
+
+
+
+## Attributes
+| 参数      | 说明    | 类型      | 可选值       | 默认值   |
+|---------- |-------- |---------- |-------------  |-------- |
+| v-model   | 绑定值   | boolean  | true / false | — |
+| disabled  | 是否禁用    | boolean   | true / false | false   |
+| active-text  | switch 打开时的文字描述    | string   | — | — |
+| inactive-text  | switch 关闭时的文字描述    | string   | — | — |
+| active-color  | switch 打开时的背景色    | string   | — | #409EFF |
+| inactive-color  | switch 关闭时的背景色    | string   | — | #C0CCDA |
+| size  | 	switch 的大小    | string   | large / default / small | — |
+
+<br/>
+
+## Events
+| 事件名称      | 说明    | 回调参数      |
+|----------     |-------- |----------    |
+| change         | switch 状态发生变化时的回调函数    | 新状态的值 |
+
+<br/>

@@ -9,7 +9,7 @@ tag: Data Display
 ## 演示
 > 默认
 
-```html
+
 <template>
   <c-carousel width="500px" height="250px">
     <c-carousel-item class="demo-carousel" v-for="item in 4">
@@ -17,14 +17,14 @@ tag: Data Display
     </c-carousel-item>
   </c-carousel>
 </template>
-```
+
 
 
 
 ## 自动播放
 > 设置 `autoplay` 开启自动播放
 
-```html
+
 <template>
   <c-carousel width="500px" height="250px" autoplay>
     <c-carousel-item class="demo-carousel" v-for="item in 4">
@@ -32,4 +32,4 @@ tag: Data Display
     </c-carousel-item>
   </c-carousel>
 </template>
-```
+

@@ -35,7 +35,7 @@ tag: Layout
 
 > `col` 必须放在 `row` 里面
 
-```html
+
 <template>
   <c-row>
     <c-col :span="12"><div>col-12</div></c-col>
@@ -53,13 +53,13 @@ tag: Layout
     <c-col :span="6"><div>col-6</div></c-col>
   </c-row>
 </template>
-```
+
 
 ## 区块间隔
 
 > 通过给 `row` 添加 `gutter` 属性，可以给下属的 `col` 添加间距
 
-```html
+
 <template>
   <c-row :gutter="20">
     <c-col :span="6"><div>col-6</div></c-col>
@@ -68,13 +68,13 @@ tag: Layout
     <c-col :span="6"><div>col-6</div></c-col>
   </c-row>
 </template>
-```
+
 
 ## flex布局
 
 > 通过给 `row` 设置参数 `justify` 为不同的值，来定义子元素的排布方式。在 `flex` 模式下有效。
 
-```html
+
 <template>
   <c-row type="flex" justify="start">
     <c-col :span="4"><div>col-4</div></c-col>
@@ -107,13 +107,13 @@ tag: Layout
     <c-col :span="4"><div>col-4</div></c-col>
   </c-row>
 </template>
-```
+
 
 ## flex对齐
 
 > 通过给 `row` 设置参数 `align` 为不同的值，来定义子元素在垂直方向上的排布方式。在 `flex` 模式下有效。
 
-```html
+
 <template>
   <c-row type="flex" justify="center" align="top">
     <c-col :span="6"><div style="height: 80px">col-4</div></c-col>
@@ -134,13 +134,13 @@ tag: Layout
     <c-col :span="6"><div style="height: 60px">col-4</div></c-col>
   </c-row>
 </template>
-```
+
 
 ## 栅格顺序
 
 > 通过 `flex` 布局的 `order` 来改变栅格的顺序
 
-```html
+
 <template>
   <c-row type="flex">
     <c-col :span="6" :order="4"><div>1 | order-4</div></c-col>
@@ -149,13 +149,13 @@ tag: Layout
     <c-col :span="6" :order="1"><div>4 | order-1</div></c-col>
   </c-row>
 </template>
-```
+
 
 ## 左右偏移
 
 > 通过设置 `offset` 属性，将列进行左右偏移
 
-```html
+
 <template>
   <c-row>
     <c-col :span="8"><div>col-8</div></c-col>
@@ -169,14 +169,14 @@ tag: Layout
     <c-col :span="12" :offset="8"><div>col-12 | offset-8</div></c-col>
   </c-row>
 </template>
-```
+
 
 ## 响应式布局
 
 > 参照 `Bootstrap` 的 响应式设计，预设四个响应尺寸：`xs` `sm` `md` `lg` <br>
 调整浏览器尺寸来查看效果
 
-```html
+
 <template>
   <c-row>
     <c-col :xs="24" :sm="12" :md="8" :lg="4"><div>col</div></c-col>
@@ -187,4 +187,4 @@ tag: Layout
     <c-col :xs="24" :sm="12" :md="8" :lg="4"><div>col</div></c-col>
   </c-row>
 </template>
-```
+

@@ -1,0 +1,32 @@
+.c-scroll {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    .c-scroll-content {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: -17px;
+      bottom: 0;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+    .c-scroll-bar {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 7px;
+      .c-scroll-thumb {
+        position: relative;
+        width: 100%;
+        background: --scroll;
+        cursor: pointer;
+        opacity: 0.6;
+        transition: opacity .2s ease-in;
+        &:hover{
+          opacity: 1;
+        }
+      }
+    }
+  }

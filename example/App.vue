@@ -177,7 +177,7 @@ const useNav = () => {
   position: absolute;
   height: 100%;
   overflow: auto;
-  background-color: #f4f5f5;
+  background-color: #fff;
   padding: 35px;
   padding-right: 160px;
   right: 0;

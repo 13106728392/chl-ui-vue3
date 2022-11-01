@@ -29,7 +29,7 @@ import demoblock from '@example/views/demoblock.vue';
 
 ## 镂空按钮
 
-> 设置 `plain` 属性可以设置镂空按钮
+### 设置 `plain` 属性可以设置镂空按钮
 
 <div class="source">
   <demo2/>
@@ -43,7 +43,7 @@ import demoblock from '@example/views/demoblock.vue';
 
 ## 圆角按钮
 
-> 设置 `round` 属性可以设置圆角按钮
+### 设置 `round` 属性可以设置圆角按钮
 
 
 <div class="source">
@@ -57,7 +57,7 @@ import demoblock from '@example/views/demoblock.vue';
 
 ## 加载中状态
 
-> 添加 `loading` 属性即可让按钮处于加载状态
+### 添加 `loading` 属性即可让按钮处于加载状态
 
 <div class="source">
   <demo4/>
@@ -69,7 +69,7 @@ import demoblock from '@example/views/demoblock.vue';
 
 ## 托管加载状态
 
-> 你只需要返回一个 `promise`，组件会托管 `loading`，这在发送请求的时候有奇效
+### 你只需要返回一个 `promise`，组件会托管 `loading`，这在发送请求的时候有奇效
 
 
 <div class="source">
@@ -83,7 +83,7 @@ import demoblock from '@example/views/demoblock.vue';
 
 ## 不可点击
 
-> 设置 `disabled` 属性达到按钮不可点击状态
+### 设置 `disabled` 属性达到按钮不可点击状态
 
 
 <div class="source">

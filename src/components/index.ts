@@ -12,7 +12,10 @@ import CarouselItem from "./carousel-item";
 import Cmenu from "./menu";
 import CmenuItem from "./menu-item";
 import CmenuItemGroup from "./menu-item-group";
-import subMenu from "./sub-menu";
+import SubMenu from "./sub-menu";
+import Scroll from "./scroll";
+
+// 引入样式
 import "../theme/index.less";
 
 const components = [
@@ -27,7 +30,8 @@ const components = [
   Cmenu,
   CmenuItem,
   CmenuItemGroup,
-  subMenu,
+  SubMenu,
+  Scroll
 ];
 
 const install = (app: App) => {
