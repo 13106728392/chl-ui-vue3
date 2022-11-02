@@ -59,7 +59,7 @@ const getSourceCode = async () => {
     let msg = await import(`/src/components/${props.compname}/doc/${props.demoname}.vue?raw`)
     sourceCode.value =msg.default
   } else {
-    sourceCode.value = await fetch(`/chl-ui-vue3/src/components/${props.compname}/doc/${props.demoname}.vue`).then(res => res.text());
+    sourceCode.value = await fetch(`/chl-ui-vue3/components/${props.compname}/doc/${props.demoname}.vue`).then(res => res.text());
   }
 }
 
