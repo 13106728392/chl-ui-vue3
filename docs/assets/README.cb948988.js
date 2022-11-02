@@ -1,0 +1,1 @@
+import{f as o,c as t,o as s,_ as c}from"./index.6d1c253d.js";const n={class:"markdown-body"},f={},l="",r=o({__name:"README",setup(_,{expose:e}){return e({frontmatter:{},excerpt:void 0}),(a,m)=>(s(),t("div",n))}}),d=c(r,[["__file","/Users/hlc/Desktop/Home/Demo.nosync/chl-ui-vue3/src/components/select/README.md"]]);export{d as default,l as excerpt,f as frontmatter};
