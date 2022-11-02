@@ -35,7 +35,7 @@ const props = defineProps({
 
 const showCode = ref(false); // 默认不显示代码
 const sourceCode = ref(""); // 展示的源代码
-const isDev = import.meta.env.MODE !== 'pro';
+const isDev = import.meta.env.MODE === 'pro';
 
 console.log(isDev)
 // const isDev = true
