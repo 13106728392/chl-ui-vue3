@@ -35,8 +35,10 @@ const props = defineProps({
 
 const showCode = ref(false); // 默认不显示代码
 const sourceCode = ref(""); // 展示的源代码
-// const isDev = import.meta.env.MODE === 'development';
-const isDev = true
+const isDev = import.meta.env.MODE !== 'pro';
+
+console.log(isDev)
+// const isDev = true
 
 const iconClass = computed(() => {
   return [
@@ -57,7 +59,7 @@ const getSourceCode = async () => {
     let msg = await import(`/src/components/${props.compname}/doc/${props.demoname}.vue?raw`)
     sourceCode.value =msg.default
   } else {
-    sourceCode.value = await fetch(`/chl-ui/components/${props.compname}/doc/${props.demoname}.vue`).then(res => res.text());
+    sourceCode.value = await fetch(`/chl-ui-vue3/src/components/${props.compname}/doc/${props.demoname}.vue`).then(res => res.text());
   }
 }
 
