@@ -1,0 +1,124 @@
+.c-rate{
+    display: inline-block;
+    vertical-align: middle;
+    .c-rate-star{
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      margin-right: 8px;
+      transition: all .3s ease;
+      position: relative;
+      &:hover {
+        transform: scale(1);
+      }
+      .favorite{
+        position: relative;
+        color: #c0c4cc;
+        &::before{
+          font-size: 20px;
+          cursor: pointer;
+          content: "\e90b";
+          transition: all .2s ease-in-out;
+          display: block;
+        }
+      }
+      .favorite-half{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        color: transparent;
+        &::before{
+          font-size: 20px;
+          cursor: pointer;
+          content: "\e90b";
+          transition: all .2s ease-in-out;
+          display: block;
+        }
+      }
+      .c-rate-star-first{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        opacity: 0;
+        cursor: pointer;
+        transition: all .3s ease;
+      }
+      .c-rate-star-second{
+        user-select: none;
+        transition: all .3s ease;
+        color: #c0c4cc;
+        cursor: pointer;
+      }
+      .other-icon{
+        position: relative;
+        display: block;
+        color: #c0c4cc;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+      }
+      .other-icon-half{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        color: transparent;
+        font-size: 20px;
+        cursor: pointer;
+        display: block;
+        transition: all .2s ease-in-out;
+      }
+    }
+    .c-rate-text{
+      display: inline-block;
+      margin-left: 8px;
+      font-size: 13px;
+    }
+    // 满的
+    .c-rate-star-full{
+      &:hover {
+        transform: scale(1.1);
+      }
+      .favorite,
+      .c-rate-star-second,
+      .other-icon{
+        color:#f5a623;
+      }
+    }
+    // 半
+    .c-rate-star-half{
+      .favorite-half{
+        color:#f5a623;
+      }
+      .c-rate-star-first{
+        color:#f5a623;
+        opacity: 1;
+      }
+      .other-icon-half{
+        color:#f5a623;
+      }
+    }
+  }
+  
+  .c-rate-disabled{
+    .c-rate-star{
+      .favorite{
+        &::before{
+          cursor: default;
+        }
+      }
+      .favorite-half{
+        &::before{
+          cursor: default;
+        }
+      }
+    }
+  }

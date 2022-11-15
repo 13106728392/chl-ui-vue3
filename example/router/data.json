@@ -175,5 +175,15 @@
     "componentName": "tooltip",
     "componentPath": "tooltip/README.md",
     "routePath": "/tooltip"
+  },
+  {
+    "done":"true",
+    "title": "Rate 评分",
+    "tag": "Feedback",
+    "componentName": "rate",
+    "componentPath": "rate/README.md",
+    "routePath": "/rate"
   }
+
+  
 ]}

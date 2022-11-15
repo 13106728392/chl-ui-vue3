@@ -89,6 +89,7 @@ export default {
 
 
 const useNav = () => {
+  // 按照tag分类 重排数组
   const menu = []
   const submenu = []
 
@@ -187,6 +188,15 @@ const useNav = () => {
 }
 
 .color1 {
-  background-color: red;
+  background-color: #F56C6C;
+}
+.color2 {
+  background-color: #67C23A;
+}
+.color3 {
+  background-color: #409EFF;
+}
+.color4 {
+  background-color: #909399;
 }
 </style>
