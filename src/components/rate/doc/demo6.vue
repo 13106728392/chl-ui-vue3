@@ -7,7 +7,7 @@
         <c-rate v-model="value2" character="好" allow-half></c-rate>
       </c-col>
       <c-col style="margin-top:20px">
-        <c-rate v-model="value3" icon="smile-filling"></c-rate>
+        <c-rate v-model="value3" icon="heart-on"></c-rate>
       </c-col> 
     </c-row>
   </template>
