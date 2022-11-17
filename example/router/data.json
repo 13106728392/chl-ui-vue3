@@ -129,7 +129,7 @@
     "routePath": "/scroll"
   },
   {
-    "done":"flase",
+    "done":"true",
     "title": "Select 选择",
     "tag": "Data Entry",
     "componentName": "select",

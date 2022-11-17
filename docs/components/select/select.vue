@@ -1,5 +1,5 @@
 <template>
-  <div class="m-select" v-inside>
+  <div class="c-select" v-inside>
 
 
 

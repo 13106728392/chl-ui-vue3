@@ -15,6 +15,8 @@ import CmenuItemGroup from "./menu-item-group";
 import SubMenu from "./sub-menu";
 import Scroll from "./scroll";
 import Rate from './rate'
+import Select from './select'
+
 
 // 引入样式
 import "../theme/index.less";
@@ -33,7 +35,8 @@ const components = [
   CmenuItemGroup,
   SubMenu,
   Scroll,
-  Rate
+  Rate,
+  Select
 ];
 
 const install = (app: App) => {
