@@ -16,6 +16,7 @@ yarn add chl-ui-vue3
 
 
 ## 快速上手
+```
 js
 import { createApp } from 'vue';
 import App from './App.vue';
@@ -29,6 +30,7 @@ createApp(App)
 .use(router)
 .use(Chlui) // 注册到Vue中
 .mount('#app')
+```
 
 ## 注意
 

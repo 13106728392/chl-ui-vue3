@@ -1,7 +1,10 @@
----
-title: Carousel 轮播
-tag: Data Display
----
+<script setup>
+import demo1 from './doc/demo1.vue';
+import demo2 from './doc/demo2.vue';
+
+import demoblock from '@example/views/demoblock.vue';
+</script>
+
 
 # Carousel 轮播
 > 以轮播的方式显示一组元素，非常经典
@@ -10,13 +13,12 @@ tag: Data Display
 > 默认
 
 
-<template>
-  <c-carousel width="500px" height="250px">
-    <c-carousel-item class="demo-carousel" v-for="item in 4">
-      {{item}}
-    </c-carousel-item>
-  </c-carousel>
-</template>
+<br/>
+<div class="source">
+  <demo1/>
+</div>
+<demoblock compname="carousel" demoname="demo1" />
+
 
 
 
@@ -25,11 +27,10 @@ tag: Data Display
 > 设置 `autoplay` 开启自动播放
 
 
-<template>
-  <c-carousel width="500px" height="250px" autoplay>
-    <c-carousel-item class="demo-carousel" v-for="item in 4">
-      {{item}}
-    </c-carousel-item>
-  </c-carousel>
-</template>
+<div class="source">
+  <demo2/>
+</div>
+<demoblock compname="carousel" demoname="demo2" />
+
+
 
