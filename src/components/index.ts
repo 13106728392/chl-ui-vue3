@@ -16,6 +16,8 @@ import SubMenu from "./sub-menu";
 import Scroll from "./scroll";
 import Rate from './rate'
 import Select from './select'
+import Badge from './badge'
+
 
 
 // 引入样式
@@ -36,7 +38,8 @@ const components = [
   SubMenu,
   Scroll,
   Rate,
-  Select
+  Select,
+  Badge
 ];
 
 const install = (app: App) => {

@@ -1,0 +1,68 @@
+.c-badge{
+
+    .c-badge-success{
+      --color: var(--success);
+    }
+    
+    .c-badge-warning{
+      --color: var(--warning);
+    }
+    
+    .c-badge-error{
+      --color: var(--danger);
+    }
+    
+    .c-badge-default{
+      --color: var(--default);
+    }
+  
+    .c-badge-warning, 
+    .c-badge-success, 
+    .c-badge-error,
+    .c-badge-default{
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 5px;
+        background-color: var(--color);
+    }
+  
+    .c-badge-shine{
+      position: relative;
+  
+      &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: block;
+        background-color: var(--color);
+        animation: shine 2.5s cubic-bezier(.47, -.2, .13, 1.35) infinite;
+      }
+    }
+  
+    .c-badge-count{
+      background-color: var(--danger);
+      border-radius: 8px;
+      font-size: 12px;
+      line-height: 16px;
+      padding: 0 5px;
+      color: var(--white);
+    }
+  
+    @keyframes shine {
+      0% {
+        transform: scale(1);
+        opacity: 0.48;
+      }
+  
+      100% {
+        transform: scale(3);
+        opacity: 0;
+      }
+    }
+  }

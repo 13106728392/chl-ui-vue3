@@ -1,8 +1,8 @@
 {"data":[
   {
-    "done":"flase",
+    "done":"true",
     "title": "Badge 徽标",
-    "tag": "Data Display",
+    "tag": "Basic 基础组件",
     "componentName": "badge",
     "componentPath": "badge/README.md",
     "routePath": "/badge"
@@ -10,7 +10,7 @@
   {
     "done":"true",
     "title": "Button 按钮",
-    "tag": "General",
+    "tag": "Basic 基础组件",
     "componentName": "button",
     "componentPath": "button/README.md",
     "routePath": "/button"
@@ -18,7 +18,7 @@
   {
     "done":"flase",
     "title": "Calendar 日历",
-    "tag": "Data Display",
+    "tag": "Form 表单组件",
     "componentName": "calendar",
     "componentPath": "calendar/README.md",
     "routePath": "/calendar"
@@ -26,7 +26,7 @@
   {
     "done":"true",
     "title": "Carousel 轮播",
-    "tag": "Data Display",
+    "tag": "Data 数据展示",
     "componentName": "carousel",
     "componentPath": "carousel/README.md",
     "routePath": "/carousel"
@@ -34,7 +34,7 @@
   {
     "done":"flase",
     "title": "Checkbox 多选框",
-    "tag": "Data Entry",
+    "tag": "Form 表单组件",
     "componentName": "checkbox",
     "componentPath": "checkbox/README.md",
     "routePath": "/checkbox"
@@ -42,7 +42,7 @@
   {
     "done":"flase",
     "title": "DatePicker 日期选择",
-    "tag": "Data Entry",
+    "tag": "Form 表单组件",
     "componentName": "date-picker",
     "componentPath": "date-picker/README.md",
     "routePath": "/date-picker"
@@ -50,7 +50,7 @@
   {
     "done":"flase",
     "title": "Drawer 抽屉",
-    "tag": "Feedback",
+    "tag": "Data 数据展示",
     "componentName": "drawer",
     "componentPath": "drawer/README.md",
     "routePath": "/drawer"
@@ -58,7 +58,7 @@
   {
     "done":"true",
     "title": "Icon 图标",
-    "tag": "General",
+    "tag": "Basic 基础组件",
     "componentName": "icon",
     "componentPath": "icon/README.md",
     "routePath": "/icon"
@@ -66,7 +66,7 @@
   {
     "done":"true",
     "title": "Input 输入框",
-    "tag": "Data Entry",
+    "tag": "Form 表单组件",
     "componentName": "input",
     "componentPath": "input/README.md",
     "routePath": "/input"
@@ -74,7 +74,7 @@
   {
     "done":"true",
     "title": "Menu 导航菜单",
-    "tag": "Navigation",
+    "tag": "Basic 基础组件",
     "componentName": "menu",
     "componentPath": "menu/README.md",
     "routePath": "/menu"
@@ -82,7 +82,7 @@
   {
     "done":"true",
     "title": "Message 消息",
-    "tag": "Feedback",
+    "tag": "Feedback 反馈组件",
     "componentName": "message",
     "componentPath": "message/README.md",
     "routePath": "/message"
@@ -90,7 +90,7 @@
   {
     "done":"true",
     "title": "Modal 对话框",
-    "tag": "Feedback",
+    "tag": "Feedback 反馈组件",
     "componentName": "modal",
     "componentPath": "modal/README.md",
     "routePath": "/modal"
@@ -98,7 +98,7 @@
   {
     "done":"flase",
     "title": "Notice 通知",
-    "tag": "Feedback",
+    "tag": "Feedback 反馈组件",
     "componentName": "notice",
     "componentPath": "notice/README.md",
     "routePath": "/notice"
@@ -107,7 +107,7 @@
   {
     "done":"flase",
     "title": "Radio 单选框",
-    "tag": "Data Entry",
+    "tag": "Form 表单组件",
     "componentName": "radio",
     "componentPath": "radio/README.md",
     "routePath": "/radio"
@@ -115,7 +115,7 @@
   {
     "done":"true",
     "title": "Grid 栅格",
-    "tag": "Layout",
+    "tag": "Basic 基础组件",
     "componentName": "row",
     "componentPath": "row/README.md",
     "routePath": "/row"
@@ -123,7 +123,7 @@
   {
     "done":"true",
     "title": "Scroll 滚动",
-    "tag": "Others",
+    "tag": "其他",
     "componentName": "scroll",
     "componentPath": "scroll/README.md",
     "routePath": "/scroll"
@@ -131,7 +131,7 @@
   {
     "done":"true",
     "title": "Select 选择",
-    "tag": "Data Entry",
+    "tag": "Form 表单组件",
     "componentName": "select",
     "componentPath": "select/README.md",
     "routePath": "/select"
@@ -139,7 +139,7 @@
   {
     "done":"flase",
     "title": "Slider 滑动块",
-    "tag": "Data Entry",
+    "tag": "Form 表单组件",
     "componentName": "slider",
     "componentPath": "slider/README.md",
     "routePath": "/slider"
@@ -147,7 +147,7 @@
   {
     "done":"flase",
     "title": "Steps 步骤条",
-    "tag": "General",
+    "tag": "Data 数据展示",
     "componentName": "steps",
     "componentPath": "steps/README.md",
     "routePath": "/steps"
@@ -155,7 +155,7 @@
   {
     "done":"true",
     "title": "Switch 开关",
-    "tag": "Data Entry",
+    "tag": "Form 表单组件",
     "componentName": "switch",
     "componentPath": "switch/README.md",
     "routePath": "/switch"
@@ -163,7 +163,7 @@
   {
     "done":"flase",
     "title": "Tabs 标签页",
-    "tag": "Data Display",
+    "tag": "Basic 基础组件",
     "componentName": "tabs",
     "componentPath": "tabs/README.md",
     "routePath": "/tabs"
@@ -171,7 +171,7 @@
   {
     "done":"flase",
     "title": "Tooltip 文字提示",
-    "tag": "General",
+    "tag": "Data 数据展示",
     "componentName": "tooltip",
     "componentPath": "tooltip/README.md",
     "routePath": "/tooltip"
@@ -179,7 +179,7 @@
   {
     "done":"true",
     "title": "Rate 评分",
-    "tag": "Feedback",
+    "tag": "Data 数据展示",
     "componentName": "rate",
     "componentPath": "rate/README.md",
     "routePath": "/rate"
