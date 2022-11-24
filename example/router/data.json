@@ -105,7 +105,7 @@
   },
  
   {
-    "done":"flase",
+    "done":"true",
     "title": "Radio 单选框",
     "tag": "Form 表单组件",
     "componentName": "radio",
@@ -161,7 +161,7 @@
     "routePath": "/switch"
   },
   {
-    "done":"flase",
+    "done":"true",
     "title": "Tabs 标签页",
     "tag": "Basic 基础组件",
     "componentName": "tabs",
