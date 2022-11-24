@@ -16,6 +16,12 @@ import SubMenu from "./sub-menu";
 import Scroll from "./scroll";
 import Rate from './rate'
 import Select from './select'
+import Badge from './badge'
+import Radio from './radio'
+import RadioButton from './radio-button'
+import RadioGroup from './radio-group'
+import Tabs from './tabs'
+import TabPane from './tab-pane'
 
 
 // 引入样式
@@ -36,7 +42,13 @@ const components = [
   SubMenu,
   Scroll,
   Rate,
-  Select
+  Select,
+  Badge,
+  Radio,
+  RadioButton,
+  RadioGroup,
+  Tabs,
+  TabPane
 ];
 
 const install = (app: App) => {
