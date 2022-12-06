@@ -137,7 +137,7 @@
     "routePath": "/select"
   },
   {
-    "done":"flase",
+    "done":"true",
     "title": "Slider 滑动块",
     "tag": "Form 表单组件",
     "componentName": "slider",

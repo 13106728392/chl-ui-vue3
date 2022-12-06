@@ -22,6 +22,7 @@ import RadioButton from './radio-button'
 import RadioGroup from './radio-group'
 import Tabs from './tabs'
 import TabPane from './tab-pane'
+import Slider from './slider'
 
 
 // 引入样式
@@ -48,7 +49,8 @@ const components = [
   RadioButton,
   RadioGroup,
   Tabs,
-  TabPane
+  TabPane,
+  Slider
 ];
 
 const install = (app: App) => {
