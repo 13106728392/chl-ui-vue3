@@ -23,6 +23,7 @@ import RadioGroup from './radio-group'
 import Tabs from './tabs'
 import TabPane from './tab-pane'
 import Slider from './slider'
+import Tooltip from './tooltip'
 
 
 // 引入样式
@@ -50,7 +51,8 @@ const components = [
   RadioGroup,
   Tabs,
   TabPane,
-  Slider
+  Slider,
+  Tooltip
 ];
 
 const install = (app: App) => {

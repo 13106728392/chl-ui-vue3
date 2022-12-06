@@ -169,7 +169,7 @@
     "routePath": "/tabs"
   },
   {
-    "done":"flase",
+    "done":"true",
     "title": "Tooltip 文字提示",
     "tag": "Data 数据展示",
     "componentName": "tooltip",
