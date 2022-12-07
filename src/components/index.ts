@@ -27,6 +27,10 @@ import Tooltip from './tooltip'
 import Breadcrumb from './breadcrumb'
 import breadcrumbItem from './breadcrumb-item'
 import Drawer from './drawer'
+import CheckboxButton from './checkbox-button'
+import CheckboxGroup from './checkbox-group'
+import Checkbox from './checkbox'
+
 
 // 引入样式
 import "../theme/index.less";
@@ -57,7 +61,10 @@ const components = [
   Tooltip,
   Breadcrumb,
   breadcrumbItem,
-  Drawer
+  Drawer,
+  CheckboxButton,
+  CheckboxGroup,
+  Checkbox
 ];
 
 const install = (app: App) => {

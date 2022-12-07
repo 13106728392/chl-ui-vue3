@@ -32,7 +32,7 @@
     "routePath": "/carousel"
   },
   {
-    "done":"flase",
+    "done":"true",
     "title": "Checkbox 多选框",
     "tag": "Form 表单组件",
     "componentName": "checkbox",
