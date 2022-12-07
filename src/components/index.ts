@@ -26,7 +26,7 @@ import Slider from './slider'
 import Tooltip from './tooltip'
 import Breadcrumb from './breadcrumb'
 import breadcrumbItem from './breadcrumb-item'
-
+import Drawer from './drawer'
 
 // 引入样式
 import "../theme/index.less";
@@ -56,7 +56,8 @@ const components = [
   Slider,
   Tooltip,
   Breadcrumb,
-  breadcrumbItem
+  breadcrumbItem,
+  Drawer
 ];
 
 const install = (app: App) => {

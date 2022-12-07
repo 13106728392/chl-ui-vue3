@@ -48,7 +48,7 @@
     "routePath": "/date-picker"
   },
   {
-    "done":"flase",
+    "done":"true",
     "title": "Drawer 抽屉",
     "tag": "Data 数据展示",
     "componentName": "drawer",
@@ -95,15 +95,7 @@
     "componentPath": "modal/README.md",
     "routePath": "/modal"
   },
-  {
-    "done":"flase",
-    "title": "Notice 通知",
-    "tag": "Feedback 反馈组件",
-    "componentName": "notice",
-    "componentPath": "notice/README.md",
-    "routePath": "/notice"
-  },
- 
+
   {
     "done":"true",
     "title": "Radio 单选框",
