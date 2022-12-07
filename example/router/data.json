@@ -145,12 +145,12 @@
     "routePath": "/slider"
   },
   {
-    "done":"flase",
-    "title": "Steps 步骤条",
-    "tag": "Data 数据展示",
-    "componentName": "steps",
-    "componentPath": "steps/README.md",
-    "routePath": "/steps"
+    "done":"true",
+    "title": "breadcrumb 面包屑",
+    "tag": "Basic 基础组件",
+    "componentName": "breadcrumb",
+    "componentPath": "breadcrumb/README.md",
+    "routePath": "/breadcrumb"
   },
   {
     "done":"true",

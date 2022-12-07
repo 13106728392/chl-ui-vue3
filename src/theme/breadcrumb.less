@@ -1,0 +1,27 @@
+.c-breadcrumb {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 14px;
+    .c-breadcrumb-item{
+      display: flex;
+      align-items: center;
+      .c-breadcrumb-item__link{
+        white-space: nowrap;
+        color: #17233d;
+        transition: color 0.3s;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover{
+          color: #409eff;
+        }
+      }
+      .c-breadcrumb-item__separator{
+        margin: 0 9px;
+        color: #c0c4cc;
+      }
+      &:last-child .c-breadcrumb-item__separator {
+        display: none;
+      }
+    }
+  }

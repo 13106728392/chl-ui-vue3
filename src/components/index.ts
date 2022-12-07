@@ -24,6 +24,8 @@ import Tabs from './tabs'
 import TabPane from './tab-pane'
 import Slider from './slider'
 import Tooltip from './tooltip'
+import Breadcrumb from './breadcrumb'
+import breadcrumbItem from './breadcrumb-item'
 
 
 // 引入样式
@@ -52,7 +54,9 @@ const components = [
   Tabs,
   TabPane,
   Slider,
-  Tooltip
+  Tooltip,
+  Breadcrumb,
+  breadcrumbItem
 ];
 
 const install = (app: App) => {
