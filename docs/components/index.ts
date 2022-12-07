@@ -22,6 +22,14 @@ import RadioButton from './radio-button'
 import RadioGroup from './radio-group'
 import Tabs from './tabs'
 import TabPane from './tab-pane'
+import Slider from './slider'
+import Tooltip from './tooltip'
+import Breadcrumb from './breadcrumb'
+import breadcrumbItem from './breadcrumb-item'
+import Drawer from './drawer'
+import CheckboxButton from './checkbox-button'
+import CheckboxGroup from './checkbox-group'
+import Checkbox from './checkbox'
 
 
 // 引入样式
@@ -48,7 +56,15 @@ const components = [
   RadioButton,
   RadioGroup,
   Tabs,
-  TabPane
+  TabPane,
+  Slider,
+  Tooltip,
+  Breadcrumb,
+  breadcrumbItem,
+  Drawer,
+  CheckboxButton,
+  CheckboxGroup,
+  Checkbox
 ];
 
 const install = (app: App) => {
