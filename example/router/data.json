@@ -15,14 +15,7 @@
     "componentPath": "button/README.md",
     "routePath": "/button"
   },
-  {
-    "done":"flase",
-    "title": "Calendar 日历",
-    "tag": "Form 表单组件",
-    "componentName": "calendar",
-    "componentPath": "calendar/README.md",
-    "routePath": "/calendar"
-  },
+
   {
     "done":"true",
     "title": "Carousel 轮播",
@@ -33,6 +26,22 @@
   },
   {
     "done":"true",
+    "title": "Tree 树形控件",
+    "tag": "Data 数据展示",
+    "componentName": "tree",
+    "componentPath": "tree/README.md",
+    "routePath": "/tree"
+  },
+  {
+    "done":"true",
+    "title": "Progress 进度条",
+    "tag": "Data 数据展示",
+    "componentName": "progress",
+    "componentPath": "progress/README.md",
+    "routePath": "/progress"
+  },
+  {
+    "done":"true",
     "title": "Checkbox 多选框",
     "tag": "Form 表单组件",
     "componentName": "checkbox",
@@ -40,12 +49,12 @@
     "routePath": "/checkbox"
   },
   {
-    "done":"flase",
-    "title": "DatePicker 日期选择",
+    "done":"true",
+    "title": "timePicker 日期选择",
     "tag": "Form 表单组件",
-    "componentName": "date-picker",
-    "componentPath": "date-picker/README.md",
-    "routePath": "/date-picker"
+    "componentName": "time-picker",
+    "componentPath": "time-picker/README.md",
+    "routePath": "/time-picker"
   },
   {
     "done":"true",
