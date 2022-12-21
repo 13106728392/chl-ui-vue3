@@ -30,6 +30,10 @@ import Drawer from './drawer'
 import CheckboxButton from './checkbox-button'
 import CheckboxGroup from './checkbox-group'
 import Checkbox from './checkbox'
+import TimePicker from './time-picker'
+import Progress from './progress'
+import Tree from './tree'
+
 
 
 // 引入样式
@@ -64,7 +68,10 @@ const components = [
   Drawer,
   CheckboxButton,
   CheckboxGroup,
-  Checkbox
+  Checkbox,
+  TimePicker,
+  Progress,
+  Tree
 ];
 
 const install = (app: App) => {
